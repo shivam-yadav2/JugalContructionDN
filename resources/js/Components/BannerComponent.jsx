@@ -8,7 +8,7 @@ const BannerComponent = ({ imageSrc, titleText }) => {
         >
             <div className="absolute top-0 left-0 right-0 h-1/3 bg-gradient-to-b from-amber-950/80 to-transparent" />
 
-            <img src={imageSrc} alt="" className="lg:h-auto h-[25vh] object-cover" />
+            <img src={imageSrc} alt="" className="lg:h-auto h-[25vh] w-full object-cover" />
 
             {/* Overlay */}
             {/* <div className="absolute inset-0" style={{ backgroundColor: 'rgba(45, 28, 17, 0.4)' }}></div> */}

@@ -1,9 +1,23 @@
 import BannerComponent from "@/Components/BannerComponent";
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
-import React, { useState } from "react";
+import React, { useRef } from "react";
 
 const Career = () => {
+    const fileInputRef = useRef(null);
+
+    const handleBrowseClick = () => {
+        fileInputRef.current.click();
+    };
+
+    const handleFileChange = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            // Update the display with the file name (you can customize this part)
+            const displayInput = document.querySelector(".file-display");
+            displayInput.value = file.name;
+        }
+    };
     return (
         <div>
             <Navbar />
@@ -86,30 +100,39 @@ const Career = () => {
                                     className="w-full px-4 py-3 bg-[#f1eee7] text-sm outline-none border-none focus:outline-none focus:border-none focus:ring-0"
                                 ></textarea>
 
-                                <div className="flex items-center justify-between">
-                                    <div className="w-2/3">
+                                <div className="flex items-start flex-col justify-between">
+                                    <div className="relative w-full">
                                         <input
                                             type="text"
-                                            placeholder="UPLOAD YOUR CV"
-                                            className="w-full px-4 py-3 bg-[#f1eee7] text-sm outline-none border-none focus:outline-none focus:border-none focus:ring-0"
+                                            className="file-display w-full px-4 py-3 bg-[#f1eee7] text-sm outline-none border-none focus:outline-none focus:border-none focus:ring-0 pr-24"
                                             readOnly
+                                            placeholder="UPLOAD YOUR CV"
                                         />
-                                        <p className="text-gray-500 text-xs mt-1">
+                                        <input
+                                            type="file"
+                                            ref={fileInputRef}
+                                            onChange={handleFileChange}
+                                            className="hidden"
+                                            accept=".doc,.docx,.pdf,.zip"
+                                        />
+                                        <button
+                                            onClick={handleBrowseClick}
+                                            className="absolute right-0 top-0 h-full bg-[#4a2c2a] text-white px-6 py-2 text-sm"
+                                        >
+                                            BROWSE...
+                                        </button>
+                                        
+                                    </div>
+                                    <p className="text-gray-500 text-xs mt-1">
                                             (Accepted formats: .doc, .docx,
                                             .pdf, .zip)
                                         </p>
-                                    </div>
-                                    <button className="bg-[#4a2c2a] text-white px-6 py-2 text-sm">
-                                        BROWSE...
-                                    </button>
                                 </div>
 
                                 <div className="flex justify-center">
-
-
-                                <button className="bg-[#EBD2A0] text-black r-m px-8 py-3 tracking-widest transition-colors duration-200">
-                                    SUBMIT
-                                </button>
+                                    <button className="bg-[#EBD2A0] text-black r-m px-8 py-3 tracking-widest transition-colors duration-200">
+                                        SUBMIT
+                                    </button>
                                 </div>
                             </div>
                         </div>
