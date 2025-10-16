@@ -13,15 +13,15 @@ const Team = () => {
             />
 
             <section className="max-w-6xl mx-auto py-20 md:py-28 lg:py-36">
-                <div className="grid grid-cols-1 md:grid-cols-7 gap-x-12 pb-28 border-b-2 border-gray-900">
-                    <div className="col-span-2">
+                <div className="grid grid-cols-1 lg:grid-cols-7 gap-x-12 pb-28 border-b-2 border-gray-900">
+                    <div className="lg:col-span-2 col-span-7 lg:p-0 p-5 flex justify-center items-center">
                         <img
                             src="/assets/images/About Us/Asset 9.png"
                             alt="Mr. Arpit Rastogi"
                             className="w-full h-full object-cover"
                         />
                     </div>
-                    <div className="col-span-5">
+                    <div className="lg:col-span-5 col-span-7 lg:p- p-5">
                         <div className="">
                             <h2 className="text-3xl newF  text-[#2D1C11]">
                                 Mr. Arpit Rastogi
@@ -65,14 +65,14 @@ const Team = () => {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-7 gap-x-12 pt-28">
-                    <div className="col-span-2">
+                    <div className="lg:col-span-2 col-span-7 lg:p-0 p-5">
                         <img
                             src="/assets/images/About Us/Asset 9.png"
                             alt="Mr. Arpit Rastogi"
                             className="w-full h-full object-cover"
                         />
                     </div>
-                    <div className="col-span-5">
+                    <div className="lg:col-span-5 col-span-7 lg:p- p-5">
                         <div className="">
                             <h2 className="text-3xl newF  text-[#2D1C11]">
                                 Mr. Shashi Shekhar Mishra

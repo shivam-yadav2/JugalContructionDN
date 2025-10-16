@@ -33,6 +33,19 @@ Route::get('/career', function () {
 Route::get('/contact-us', function () {
     return Inertia::render('Contact/Contact');
 });
+Route::get('/projects/plotted-development', function () {
+    return Inertia::render('Projects/Plotted');
+});
+Route::get('/projects/commercial', function () {
+    return Inertia::render('Projects/Commercial');
+});
+Route::get('/projects/residential', function () {
+    return Inertia::render('Projects/Residential');
+});
+
+Route::get('/project-detail', function () {
+    return Inertia::render('Projects/ProjectDetail');
+});
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

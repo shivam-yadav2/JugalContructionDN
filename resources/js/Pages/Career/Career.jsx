@@ -11,7 +11,7 @@ const Career = () => {
                 imageSrc={"/assets/images/Career/Asset 2.png"}
                 titleText={"Career"}
             />
-            <section className="max-w-6xl mx-auto py-16 md:py-20 lg:py-24">
+            <section className="max-w-6xl mx-auto py-16 md:py-20 lg:py-24 lg:px-0 px-5">
                 <div className="flex flex-col items-center gap-12 justify-center ">
                     <h1 className=" text-3xl pb-1 md:text-4xl lg:text-5xl font-[500] newF bg-gradient-to-r from-[#9c7948] via-[#d1a260] to-[#fcc06c] bg-clip-text text-transparent ">
                         Why Join LJK?
@@ -27,7 +27,7 @@ const Career = () => {
                         member of our team, you have the opportunity to work on
                         a variety of intriguing projects.
                     </p>
-                    <h2 className="text-3xl pb-1 mb-12 md:text-4xl lg:text-5xl font-[500] newF bg-gradient-to-r from-[#9c7948] via-[#d4a562] to-[#fcc06c] bg-clip-text text-transparent ">
+                    <h2 className="text-3xl pb-1  lg:mb-12 md:text-4xl lg:text-5xl font-[500] newF bg-gradient-to-r from-[#9c7948] via-[#d4a562] to-[#fcc06c] bg-clip-text text-transparent ">
                         Think you'd be a good fit for our team?
                     </h2>
                 </div>
@@ -36,7 +36,7 @@ const Career = () => {
                 <img
                     src="/assets/images/Career/Asset 1.png" // Replace with the actual image URL
                     alt="Person walking up stairs"
-                    className="w-full h-auto object-cover"
+                    className="w-full h-[30vh] lg:h-auto object-cover "
                 />
             </div>
 

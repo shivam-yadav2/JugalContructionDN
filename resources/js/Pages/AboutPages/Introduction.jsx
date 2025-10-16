@@ -96,7 +96,7 @@ const Introduction = () => {
 
             <section className="">
                 <div className="relative">
-                    <img src="/assets/images/About Us/Asset 2.png" alt="" />
+                    <img src="/assets/images/About Us/Asset 2.png" className="lg:h-auto h-[35vh]" alt="" />
                     <div className="absolute w-full h-full top-0 left-0 ">
                         <div className="max-w-6xl mx-auto px-6 flex flex-col justify-center items-start gap-12 h-full">
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-[500] newF bg-gradient-to-r from-[#9c7948] via-[#f7c073] to-[#fcc06c] bg-clip-text text-transparent ">

@@ -166,17 +166,17 @@ function Home() {
                                     className="w-full h-full object-cover"
                                 />
                             </div>
-                            <div className="relative lg:hidden  w-full h-full border-8 border-amber-900 shadow-lg">
+                            {/* <div className="relative lg:hidden  w-full h-full border-8 border-amber-900 shadow-lg">
                                 <div className="  absolute top-0 left-0 w-full h-full bg-black/70"></div>
                                 <img
                                     src="/assets/images/home/Asset 6.png"
                                     alt="Vasto"
                                     className="w-full h-full object-cover"
                                 />
-                            </div>
+                            </div> */}
                         </div>
 
-                        <div className="relative col-start-2 text-white pl-8">
+                        <div className="relative col-start-2 text-white p-3 lg:p-0  lg:pl-8">
                             <div className="w-full mx-auto flex flex-col items-center md:items-center gap-7 ">
                                 <h2 className=" newF bg-gradient-to-r from-[#9c7948] via-[#f7c073] to-[#fcc06c] bg-clip-text text-transparent text-2xl lg:text-4xl 2xl:text-5xl mb-4 ">
                                     Come Discover
@@ -288,7 +288,7 @@ function Home() {
                         LJK Promise
                     </h2>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-12">
                         {/* Trust */}
                         <div className="bg-[#2D1C11] p-4 lg:p-6 2xl:p-8">
                             <div className="mb-12 w-full flex justify-end">

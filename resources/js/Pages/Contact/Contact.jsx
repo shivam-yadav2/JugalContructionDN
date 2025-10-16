@@ -93,7 +93,7 @@ const Contact = () => {
                             {/* <div className="hidden md:block border-l border-amber-900 opacity-40"></div> */}
 
                             {/* Address Section */}
-                            <div className="flex flex-col items-center text-center md:border-l-2  md:border-[#2D1C11] ">
+                            <div className="flex flex-col items-center text-center lg:pt-0 pt-8 md:border-t-0 border-t-2 md:border-l-2  border-[#2D1C11] ">
                                 <img
                                     src="/assets/images/Contact Us/Asset 3.png"
                                     alt=""
@@ -113,12 +113,11 @@ const Contact = () => {
                                     Lucknow - 226010
                                 </p>
                             </div>
-
                             {/* Divider */}
                             {/* <div className="hidden md:block border-l border-amber-900 opacity-40"></div> */}
 
                             {/* Email Section */}
-                            <div className="flex flex-col items-center text-center md:border-l-2  md:border-[#2D1C11] ">
+                            <div className="flex flex-col items-center text-center lg:pt-0 pt-8  md:border-t-0 border-t-2  md:border-l-2  border-[#2D1C11] ">
                                 <img
                                     src="/assets/images/Contact Us/Asset 2.png"
                                     alt=""
