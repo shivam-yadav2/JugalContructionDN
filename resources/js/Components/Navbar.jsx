@@ -9,12 +9,12 @@ const Navbar = () => {
     const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
     const [projectsDropdownOpen, setProjectsDropdownOpen] = useState(false);
     const [mediaDropdownOpen, setMediaDropdownOpen] = useState(false);
-    
+
     // Mobile dropdown states
     const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
     const [mobileProjectsOpen, setMobileProjectsOpen] = useState(false);
     const [mobileMediaOpen, setMobileMediaOpen] = useState(false);
-    
+
     const aboutDropdownRef = useRef(null);
     const projectsDropdownRef = useRef(null);
     const mediaDropdownRef = useRef(null);
@@ -140,9 +140,7 @@ const Navbar = () => {
             }
 
             let current = "Home";
-            const checkItems = navItems.filter(
-                (item) => !item.hasDropdown
-            );
+            const checkItems = navItems.filter((item) => !item.hasDropdown);
             checkItems.forEach((item) => {
                 const sectionId = item.title.toLowerCase().replace(/\s+/g, "-");
                 const section = document.getElementById(sectionId);
@@ -236,22 +234,30 @@ const Navbar = () => {
                                         {aboutDropdownOpen && (
                                             <div
                                                 className="absolute top-full left-0 mt-2 w-56 bg-[#ebd2a0] shadow-xl z-50"
-                                                onMouseLeave={closeAboutDropdown}
+                                                onMouseLeave={
+                                                    closeAboutDropdown
+                                                }
                                             >
-                                                {aboutUsSubItems.map((subItem) => (
-                                                    <a
-                                                        key={subItem.title}
-                                                        href={subItem.href}
-                                                        className={`block px-6 py-2 text-[#2D1C11] hover:bg-[#fff] transition-colors duration-200 font-medium text-sm ${
-                                                            isSubItemActive(subItem.href)
-                                                                ? "bg-white"
-                                                                : ""
-                                                        }`}
-                                                        onClick={closeAboutDropdown}
-                                                    >
-                                                        {subItem.title}
-                                                    </a>
-                                                ))}
+                                                {aboutUsSubItems.map(
+                                                    (subItem) => (
+                                                        <a
+                                                            key={subItem.title}
+                                                            href={subItem.href}
+                                                            className={`block px-6 py-2 text-[#2D1C11] hover:bg-[#fff] transition-colors duration-200 font-medium text-sm ${
+                                                                isSubItemActive(
+                                                                    subItem.href
+                                                                )
+                                                                    ? "bg-white"
+                                                                    : ""
+                                                            }`}
+                                                            onClick={
+                                                                closeAboutDropdown
+                                                            }
+                                                        >
+                                                            {subItem.title}
+                                                        </a>
+                                                    )
+                                                )}
                                             </div>
                                         )}
                                     </div>
@@ -277,22 +283,30 @@ const Navbar = () => {
                                         {projectsDropdownOpen && (
                                             <div
                                                 className="absolute top-full left-0 mt-2 w-60 bg-[#ebd2a0] shadow-xl z-50"
-                                                onMouseLeave={closeProjectsDropdown}
+                                                onMouseLeave={
+                                                    closeProjectsDropdown
+                                                }
                                             >
-                                                {projectsSubItems.map((subItem) => (
-                                                    <a
-                                                        key={subItem.title}
-                                                        href={subItem.href}
-                                                        className={`block px-6 py-2 text-[#2D1C11] hover:bg-[#fff] transition-colors duration-200 font-medium text-sm ${
-                                                            isSubItemActive(subItem.href)
-                                                                ? "bg-white"
-                                                                : ""
-                                                        }`}
-                                                        onClick={closeProjectsDropdown}
-                                                    >
-                                                        {subItem.title}
-                                                    </a>
-                                                ))}
+                                                {projectsSubItems.map(
+                                                    (subItem) => (
+                                                        <a
+                                                            key={subItem.title}
+                                                            href={subItem.href}
+                                                            className={`block px-6 py-2 text-[#2D1C11] hover:bg-[#fff] transition-colors duration-200 font-medium text-sm ${
+                                                                isSubItemActive(
+                                                                    subItem.href
+                                                                )
+                                                                    ? "bg-white"
+                                                                    : ""
+                                                            }`}
+                                                            onClick={
+                                                                closeProjectsDropdown
+                                                            }
+                                                        >
+                                                            {subItem.title}
+                                                        </a>
+                                                    )
+                                                )}
                                             </div>
                                         )}
                                     </div>
@@ -318,22 +332,30 @@ const Navbar = () => {
                                         {mediaDropdownOpen && (
                                             <div
                                                 className="absolute top-full left-0 mt-2 w-56 bg-[#ebd2a0] shadow-xl z-50"
-                                                onMouseLeave={closeMediaDropdown}
+                                                onMouseLeave={
+                                                    closeMediaDropdown
+                                                }
                                             >
-                                                {mediaSubItems.map((subItem) => (
-                                                    <a
-                                                        key={subItem.title}
-                                                        href={subItem.href}
-                                                        className={`block px-6 py-2 text-[#2D1C11] hover:bg-[#fff] transition-colors duration-200 font-medium text-sm ${
-                                                            isSubItemActive(subItem.href)
-                                                                ? "bg-white"
-                                                                : ""
-                                                        }`}
-                                                        onClick={closeMediaDropdown}
-                                                    >
-                                                        {subItem.title}
-                                                    </a>
-                                                ))}
+                                                {mediaSubItems.map(
+                                                    (subItem) => (
+                                                        <a
+                                                            key={subItem.title}
+                                                            href={subItem.href}
+                                                            className={`block px-6 py-2 text-[#2D1C11] hover:bg-[#fff] transition-colors duration-200 font-medium text-sm ${
+                                                                isSubItemActive(
+                                                                    subItem.href
+                                                                )
+                                                                    ? "bg-white"
+                                                                    : ""
+                                                            }`}
+                                                            onClick={
+                                                                closeMediaDropdown
+                                                            }
+                                                        >
+                                                            {subItem.title}
+                                                        </a>
+                                                    )
+                                                )}
                                             </div>
                                         )}
                                     </div>
@@ -356,6 +378,13 @@ const Navbar = () => {
                         {/* Enquire Button */}
                         <button className="hidden lg:block px-4 xl:px-6 py-2 bg-[#ebd2a0] text-[#202020] hover:bg-amber-200 transition-all duration-300 text-sm xl:text-base font-medium">
                             ENQUIRE NOW
+                        </button>
+                        <button className="hidden lg:block  transition-all duration-300 text-sm xl:text-base font-medium">
+                            <img
+                                src="/assets/images/Home/Asset 39.png"
+                                className=" h-10"
+                                alt="LALA Jugal Kishore Constructions"
+                            />
                         </button>
                     </div>
 
@@ -391,9 +420,12 @@ const Navbar = () => {
                             {item.title === "About Us" ? (
                                 <>
                                     <button
-                                        onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
+                                        onClick={() =>
+                                            setMobileAboutOpen(!mobileAboutOpen)
+                                        }
                                         className={`w-full flex items-center justify-between text-left text-base font-medium text-white hover:text-amber-200 transition-colors duration-200 py-2 ${
-                                            activeItem === item.title || isAboutUsActive()
+                                            activeItem === item.title ||
+                                            isAboutUsActive()
                                                 ? "text-amber-200"
                                                 : ""
                                         }`}
@@ -402,7 +434,9 @@ const Navbar = () => {
                                         <ChevronDown
                                             size={20}
                                             className={`transform transition-transform duration-300 ${
-                                                mobileAboutOpen ? "rotate-180" : ""
+                                                mobileAboutOpen
+                                                    ? "rotate-180"
+                                                    : ""
                                             }`}
                                         />
                                     </button>
@@ -413,11 +447,15 @@ const Navbar = () => {
                                                     key={subItem.title}
                                                     href={subItem.href}
                                                     className={`block text-sm py-2 transition-colors duration-200 ${
-                                                        isSubItemActive(subItem.href)
+                                                        isSubItemActive(
+                                                            subItem.href
+                                                        )
                                                             ? "text-amber-200 font-medium"
                                                             : "text-[#ebd2a0] hover:text-amber-200"
                                                     }`}
-                                                    onClick={() => setMenuOpen(false)}
+                                                    onClick={() =>
+                                                        setMenuOpen(false)
+                                                    }
                                                 >
                                                     {subItem.title}
                                                 </a>
@@ -428,9 +466,14 @@ const Navbar = () => {
                             ) : item.title === "Projects" ? (
                                 <>
                                     <button
-                                        onClick={() => setMobileProjectsOpen(!mobileProjectsOpen)}
+                                        onClick={() =>
+                                            setMobileProjectsOpen(
+                                                !mobileProjectsOpen
+                                            )
+                                        }
                                         className={`w-full flex items-center justify-between text-left text-base font-medium text-white hover:text-amber-200 transition-colors duration-200 py-2 ${
-                                            activeItem === item.title || isProjectsActive()
+                                            activeItem === item.title ||
+                                            isProjectsActive()
                                                 ? "text-amber-200"
                                                 : ""
                                         }`}
@@ -439,7 +482,9 @@ const Navbar = () => {
                                         <ChevronDown
                                             size={20}
                                             className={`transform transition-transform duration-300 ${
-                                                mobileProjectsOpen ? "rotate-180" : ""
+                                                mobileProjectsOpen
+                                                    ? "rotate-180"
+                                                    : ""
                                             }`}
                                         />
                                     </button>
@@ -450,11 +495,15 @@ const Navbar = () => {
                                                     key={subItem.title}
                                                     href={subItem.href}
                                                     className={`block text-sm py-2 transition-colors duration-200 ${
-                                                        isSubItemActive(subItem.href)
+                                                        isSubItemActive(
+                                                            subItem.href
+                                                        )
                                                             ? "text-amber-200 font-medium"
                                                             : "text-[#ebd2a0] hover:text-amber-200"
                                                     }`}
-                                                    onClick={() => setMenuOpen(false)}
+                                                    onClick={() =>
+                                                        setMenuOpen(false)
+                                                    }
                                                 >
                                                     {subItem.title}
                                                 </a>
@@ -465,9 +514,12 @@ const Navbar = () => {
                             ) : item.title === "Media" ? (
                                 <>
                                     <button
-                                        onClick={() => setMobileMediaOpen(!mobileMediaOpen)}
+                                        onClick={() =>
+                                            setMobileMediaOpen(!mobileMediaOpen)
+                                        }
                                         className={`w-full flex items-center justify-between text-left text-base font-medium text-white hover:text-amber-200 transition-colors duration-200 py-2 ${
-                                            activeItem === item.title || isMediaActive()
+                                            activeItem === item.title ||
+                                            isMediaActive()
                                                 ? "text-amber-200"
                                                 : ""
                                         }`}
@@ -476,7 +528,9 @@ const Navbar = () => {
                                         <ChevronDown
                                             size={20}
                                             className={`transform transition-transform duration-300 ${
-                                                mobileMediaOpen ? "rotate-180" : ""
+                                                mobileMediaOpen
+                                                    ? "rotate-180"
+                                                    : ""
                                             }`}
                                         />
                                     </button>
@@ -487,11 +541,15 @@ const Navbar = () => {
                                                     key={subItem.title}
                                                     href={subItem.href}
                                                     className={`block text-sm py-2 transition-colors duration-200 ${
-                                                        isSubItemActive(subItem.href)
+                                                        isSubItemActive(
+                                                            subItem.href
+                                                        )
                                                             ? "text-amber-200 font-medium"
                                                             : "text-[#ebd2a0] hover:text-amber-200"
                                                     }`}
-                                                    onClick={() => setMenuOpen(false)}
+                                                    onClick={() =>
+                                                        setMenuOpen(false)
+                                                    }
                                                 >
                                                     {subItem.title}
                                                 </a>
