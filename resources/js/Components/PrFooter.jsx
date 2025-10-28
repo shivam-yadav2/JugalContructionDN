@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Facebook, Instagram, Youtube, Linkedin, Send } from "lucide-react";
+import { Facebook, Instagram, Youtube, Linkedin, Send, MoveRight } from "lucide-react";
 
 const ProjectContactFooter = () => {
     const [formData, setFormData] = useState({
@@ -37,9 +37,12 @@ const ProjectContactFooter = () => {
                         <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif newF bg-gradient-to-r from-[#a88451] via-[#b38e5a] to-[#eebe7a] bg-clip-text text-transparent mb-6">
                             Residential Projects
                         </h3>
-                        <button className="bg-[#c41e3a] hover:bg-[#a01629] text-white px-6 py-1  font-semibold text-sm tracking-wider transition-colors duration-200">
-                            COMING SOON
-                        </button>
+                        <button
+                                    variant="outline"
+                                    className=" inline-flex items-center tracking-widest text-[#fcc06c]  hover:text-white r-m transition-colors duration-200 group text-lg"
+                                >
+                                    KNOW MORE <MoveRight />
+                                </button>
                     </div>
                 </div>
 
@@ -55,9 +58,12 @@ const ProjectContactFooter = () => {
                         <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif newF bg-gradient-to-r from-[#a88451] via-[#b38e5a] to-[#eebe7a] bg-clip-text text-transparent mb-6">
                             Commercial Projects
                         </h3>
-                        <button className="bg-[#c41e3a] hover:bg-[#a01629] text-white px-6 py-1 font-bold text-sm tracking-wider transition-colors duration-200">
-                            COMING SOON
-                        </button>
+                        <button
+                                    variant="outline"
+                                    className=" inline-flex items-center tracking-widest text-[#fcc06c]  hover:text-white r-m transition-colors duration-200 group text-lg"
+                                >
+                                    KNOW MORE <MoveRight />
+                                </button>
                     </div>
                 </div>
 
@@ -73,9 +79,12 @@ const ProjectContactFooter = () => {
                         <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif newF bg-gradient-to-r from-[#a88451] via-[#b38e5a] to-[#eebe7a] bg-clip-text text-transparent mb-6">
                             Plotted Development
                         </h3>
-                        <button className="bg-[#c41e3a] hover:bg-[#a01629] text-white px-6 py-1 font-bold text-sm tracking-wider transition-colors duration-200">
-                            COMING SOON
-                        </button>
+                        <button
+                                    variant="outline"
+                                    className=" inline-flex items-center tracking-widest text-[#fcc06c]  hover:text-white r-m transition-colors duration-200 group text-lg"
+                                >
+                                    KNOW MORE <MoveRight />
+                                </button>
                     </div>
                 </div>
             </section>

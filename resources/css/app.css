@@ -95,6 +95,13 @@
     font-family: "Roboto-medium", sans-serif !important;
 }
 
+/* Add this to your global CSS or component-specific CSS */
+select {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
 @layer base {
     * {
         @apply border-border;

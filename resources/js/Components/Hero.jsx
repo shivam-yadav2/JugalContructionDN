@@ -135,18 +135,7 @@ const HeroSlider = () => {
                 ))}
             </div>
 
-            {/* ---------- WhatsApp Button ---------- */}
-            <button className="fixed bottom-36 right-6  shadow-2xl transition-all duration-200 z-40 hover:scale-110">
-                <img src="/assets/images/home/Asset 30.png" alt="" />
-            </button>
-            <button className="fixed bottom-20 right-6 shadow-2xl transition-all duration-200 z-40 hover:scale-110">
-                <img src="/assets/images/home/whatsapp.png" alt="" />
-            </button>
-
-            {/* ---------- Chat Button ---------- */}
-            <button className="fixed bottom-6 right-6  shadow-2xl transition-all duration-200 z-40 hover:scale-110">
-                <img src="/assets/images/home/Asset 3.png" alt="" />
-            </button>
+            
 
             {/* ---------- Animation Styles ---------- */}
             <style>{`

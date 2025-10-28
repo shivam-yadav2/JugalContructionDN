@@ -16,7 +16,7 @@ const Team = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-7 gap-x-12 pb-28 border-b-2 border-gray-900">
                     <div className="lg:col-span-2 col-span-7 lg:p-0 p-5 flex justify-center items-center">
                         <img
-                            src="/assets/images/About Us/Asset 9.png"
+                            src="/assets/images/About Us/Asset 11.png"
                             alt="Mr. Arpit Rastogi"
                             className="w-full h-full object-cover"
                         />
@@ -67,7 +67,7 @@ const Team = () => {
                 <div className="grid grid-cols-1 md:grid-cols-7 gap-x-12 pt-28">
                     <div className="lg:col-span-2 col-span-7 lg:p-0 p-5">
                         <img
-                            src="/assets/images/About Us/Asset 9.png"
+                            src="/assets/images/About Us/Asset 12.png"
                             alt="Mr. Arpit Rastogi"
                             className="w-full h-full object-cover"
                         />

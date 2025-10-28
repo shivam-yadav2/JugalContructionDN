@@ -72,13 +72,13 @@ const Contact = () => {
             <section className="max-w-6xl mx-auto py-16 md:py-20 lg:py-24">
                 <div>
                     <div className="w-full bg-[#ebd2a0] py-24 px-4">
-                        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 ">
                             {/* Phone Section */}
                             <div className="flex flex-col items-center text-center">
                                 <img
                                     src="/assets/images/Contact Us/Asset 4.png"
                                     alt=""
-                                    className="mb-4"
+                                    className="mb-4 w-20 h-20 object-contain"
                                 />
 
                                 <h3 className="text-2xl text-[#2D1C11] my-3 newF tracking-wider">
@@ -97,7 +97,7 @@ const Contact = () => {
                                 <img
                                     src="/assets/images/Contact Us/Asset 3.png"
                                     alt=""
-                                    className="mb-4"
+                                    className="mb-4 w-20 h-20 object-contain"
                                 />
 
                                 <h3 className="text-2xl text-[#2D1C11] my-3 newF tracking-wider">
@@ -121,7 +121,7 @@ const Contact = () => {
                                 <img
                                     src="/assets/images/Contact Us/Asset 2.png"
                                     alt=""
-                                    className="mb-4"
+                                    className="mb-4 w-20 h-20 object-contain"
                                 />
 
                                 <h3 className="text-2xl text-[#2D1C11] my-3 newF tracking-wider">

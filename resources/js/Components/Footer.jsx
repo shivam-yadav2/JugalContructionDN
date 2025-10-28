@@ -2,24 +2,24 @@ import React, { useState } from "react";
 import { Facebook, Instagram, Youtube, Linkedin, Send } from "lucide-react";
 
 const Footer = () => {
-        const [formData, setFormData] = useState({
-            fullName: "",
-            phone: "",
-            email: "",
-            message: "",
-        });
-    
-        const [newsletter, setNewsletter] = useState("");
-    
-        const handleSubmit = (e) => {
-            e.preventDefault();
-            console.log("Form submitted:", formData);
-        };
-    
-        const handleNewsletterSubmit = (e) => {
-            e.preventDefault();
-            console.log("Newsletter email:", newsletter);
-        };
+    const [formData, setFormData] = useState({
+        fullName: "",
+        phone: "",
+        email: "",
+        message: "",
+    });
+
+    const [newsletter, setNewsletter] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Form submitted:", formData);
+    };
+
+    const handleNewsletterSubmit = (e) => {
+        e.preventDefault();
+        console.log("Newsletter email:", newsletter);
+    };
     return (
         <div>
             {/* Footer */}
@@ -35,20 +35,26 @@ const Footer = () => {
                             />
 
                             <div className="space-y-2  leading-relaxed">
-                                <p className="roboto ">
-                                    <span className="text-[#d8a864]"> A:</span>{" "}
-                                    LJK Construction India Pvt Ltd, 7th Floor,
-                                </p>
-                                <p className="ml-4">
-                                    Eldeco Corporate Chambers - II, Vibhuti
-                                    Khand,
-                                </p>
-                                <p className="ml-4">
-                                    Gomti Nagar, Lucknow - 226010
-                                </p>
+                                <div>
+                                    <p className="roboto ">
+                                        <span className="text-[#d8a864]">
+                                            {" "}
+                                            A:
+                                        </span>{" "}
+                                        LJK Construction India Pvt Ltd, 7th
+                                        Floor,
+                                    </p>
+                                    <p className="ml-4">
+                                        Eldeco Corporate Chambers - II, Vibhuti
+                                        Khand,
+                                    </p>
+                                    <p className="ml-4">
+                                        Gomti Nagar, Lucknow - 226010
+                                    </p>
+                                </div>
                                 <p className="mt-4 ">
                                     <span className="text-[#d8a864]">T:</span>{" "}
-                                    0522-4001192, 0522-4001195
+                                    0522-4001195
                                 </p>
                             </div>
                         </div>

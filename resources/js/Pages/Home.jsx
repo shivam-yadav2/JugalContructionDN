@@ -237,7 +237,7 @@ function Home() {
                             <div className="relative h-full flex flex-col justify-end p-8 md:p-10">
                                 <div className="flex flex-col gap-6">
                                     <h3 className="text-4xl newF tracking-wider 2xl:text-5xl font-bold text-[#2D1C11] mb-2">
-                                        Township Living
+                                        Township 
                                     </h3>
                                     <p className="text-[#2D1C11] text-sm md:text-base leading-relaxed max-w-md mb-4">
                                         Expansive landscapes, thoughtfully

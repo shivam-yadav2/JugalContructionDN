@@ -1,12 +1,5 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select";
 import Navbar from "@/Components/Navbar";
 import BannerComponent from "@/Components/BannerComponent";
 import Footer from "@/Components/Footer";
@@ -14,20 +7,18 @@ import Footer from "@/Components/Footer";
 const CardComponent = ({ imageSrc, title, location, date }) => {
     return (
         <div className="relative overflow-hidden group cursor-pointer">
-            <div className=" relative">
+            <div className="relative">
                 <img
                     src={imageSrc}
                     alt={title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" /> */}
-
-                <div className=" bg-[#f1eee7] flex flex-col  lg:items-start bottom-0 left-0 right-0 p-2 lg:p-6 text-[#2D1C11]">
-                    <h3 className=" lg:text-xl font-bold mb-1 tracking-wide">
+                <div className="bg-[#f1eee7] flex flex-col lg:items-start bottom-0 left-0 right-0 p-2 lg:p-6 text-[#2D1C11]">
+                    <h3 className="lg:text-xl font-bold mb-1 tracking-wide">
                         {title}
                     </h3>
                     <p className="text-sm mb-3 opacity-90">{location}</p>
-                    <div className="inline-block text-[#f1eee7] bg-[#2D1C11] px-4 py-2  font-semibold tracking-wider">
+                    <div className="inline-block text-[#f1eee7] bg-[#2D1C11] px-4 py-2 font-semibold tracking-wider">
                         {date}
                     </div>
                 </div>
@@ -36,7 +27,7 @@ const CardComponent = ({ imageSrc, title, location, date }) => {
     );
 };
 
-const Event = () => {
+const Press = () => {
     const [selectedYear, setSelectedYear] = useState("2025");
     const [selectedMonth, setSelectedMonth] = useState("OCT");
 
@@ -65,14 +56,12 @@ const Event = () => {
         },
         {
             imageSrc: "/assets/images/Media/Asset 2.png",
-
             title: "TIMES OF INDIA",
             location: "Lucknow",
             date: "08 - DEC - 2021",
         },
         {
             imageSrc: "/assets/images/Media/Asset 3.png",
-
             title: "TIMES OF INDIA",
             location: "Lucknow",
             date: "08 - DEC - 2021",
@@ -85,14 +74,12 @@ const Event = () => {
         },
         {
             imageSrc: "/assets/images/Media/Asset 5.png",
-
             title: "TIMES OF INDIA",
             location: "Lucknow",
             date: "08 - DEC - 2021",
         },
         {
             imageSrc: "/assets/images/Media/Asset 6.png",
-
             title: "TIMES OF INDIA",
             location: "Lucknow",
             date: "08 - DEC - 2021",
@@ -100,7 +87,7 @@ const Event = () => {
     ];
 
     return (
-        <div className=" ">
+        <div>
             <Navbar />
             <BannerComponent
                 imageSrc={"/assets/images/Media/Asset 7.png"}
@@ -110,57 +97,47 @@ const Event = () => {
             <section className="max-w-7xl mx-auto px-4 py-12">
                 {/* Filters */}
                 <div className="flex flex-wrap gap-6 mb-12">
-                    <Select
-                        value={selectedYear}
-                        onValueChange={setSelectedYear}
-                    >
-                        <SelectTrigger className="w-auto border-0 bg-transparent p-0 gap-0 h-auto focus:ring-0">
-                            <div className="flex items-center">
-                                <span className="bg-[#f1eee7] text-[#2D1C11] px-4 py-2.5 text-xs font-semibold tracking-widest">
-                                    SELECT A YEAR
-                                </span>
-                                <div className="bg-[#2D1C11] text-white px-4 py-2.5 flex items-center gap-2">
-                                    <span className="text-xs font-semibold tracking-wider">
-                                        {selectedYear}
-                                    </span>
-                                    <ChevronDown className="w-4 h-4" />
-                                </div>
-                            </div>
-                        </SelectTrigger>
-                        <SelectContent>
-                            {years.map((year) => (
-                                <SelectItem key={year} value={year}>
-                                    {year}
-                                </SelectItem>
-                            ))}
-                        </SelectContent>
-                    </Select>
+                    {/* Year Selector */}
+                    <div className="relative inline-flex items-center">
+                        <span className="bg-[#f1eee7] text-[#2D1C11] px-4 py-2.5 text-xs font-semibold tracking-widest">
+                            SELECT A YEAR
+                        </span>
+                        <div className="relative">
+                            <select
+                                value={selectedYear}
+                                onChange={(e) => setSelectedYear(e.target.value)}
+                                className="appearance-none bg-[#2D1C11] text-white px-4 py-2.5 text-xs font-semibold tracking-wider pr-8 cursor-pointer focus:outline-none"
+                            >
+                                {years.map((year) => (
+                                    <option key={year} value={year} className="bg-white text-black">
+                                        {year}
+                                    </option>
+                                ))}
+                            </select>
+                            <ChevronDown className="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white pointer-events-none" />
+                        </div>
+                    </div>
 
-                    <Select
-                        value={selectedMonth}
-                        onValueChange={setSelectedMonth}
-                    >
-                        <SelectTrigger className="w-auto border-0 bg-transparent p-0 gap-0 h-auto focus:ring-0">
-                            <div className="flex items-center">
-                                <span className="bg-[#f1eee7] text-[#2D1C11] px-4 py-2.5 text-xs font-semibold tracking-widest">
-                                    SELECT A MONTH
-                                </span>
-                                <div className="bg-[#2D1C11] text-white px-4 py-2.5 flex items-center gap-2">
-                                    <span className="text-xs font-semibold tracking-wider">
-                                        {selectedMonth}
-                                    </span>
-                                    <ChevronDown className="w-4 h-4" />
-                                </div>
-                            </div>
-                        </SelectTrigger>
-                        <SelectContent>
-                            {months.map((month) => (
-                                <SelectItem key={month} value={month}>
-                                    {month}
-                                </SelectItem>
-                            ))}
-                        </SelectContent>
-                    </Select>
+                    {/* Month Selector */}
+                    <div className="relative inline-flex items-center">
+                        <span className="bg-[#f1eee7] text-[#2D1C11] px-4 py-2.5 text-xs font-semibold tracking-widest">
+                            SELECT A MONTH
+                        </span>
+                        <div className="relative">
+                            <select
+                                value={selectedMonth}
+                                onChange={(e) => setSelectedMonth(e.target.value)}
+                                className="appearance-none bg-[#2D1C11] text-white px-4 py-2.5 text-xs font-semibold tracking-wider pr-8 cursor-pointer focus:outline-none"
+                            >
+                                {months.map((month) => (
+                                    <option key={month} value={month} className="bg-white text-black">
+                                        {month}
+                                    </option>
+                                ))}
+                            </select>
+                            <ChevronDown className="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white pointer-events-none" />
+                        </div>
+                    </div>
                 </div>
 
                 {/* Cards Grid */}
@@ -181,4 +158,4 @@ const Event = () => {
     );
 };
 
-export default Event;
+export default Press;   

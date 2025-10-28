@@ -1,28 +1,28 @@
-import React , { useState } from "react";
+import React, { useState } from "react";
 import Navbar from "../../Components/Navbar";
 import BannerComponent from "../../Components/BannerComponent";
 import Footer from "../../Components/Footer";
 import FourPillars from "@/Components/FourPillars";
 
 const Introduction = () => {
-        const [formData, setFormData] = useState({
-            fullName: "",
-            phone: "",
-            email: "",
-            message: "",
-        });
-    
-        const [newsletter, setNewsletter] = useState("");
-    
-        const handleSubmit = (e) => {
-            e.preventDefault();
-            console.log("Form submitted:", formData);
-        };
-    
-        const handleNewsletterSubmit = (e) => {
-            e.preventDefault();
-            console.log("Newsletter email:", newsletter);
-        };
+    const [formData, setFormData] = useState({
+        fullName: "",
+        phone: "",
+        email: "",
+        message: "",
+    });
+
+    const [newsletter, setNewsletter] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Form submitted:", formData);
+    };
+
+    const handleNewsletterSubmit = (e) => {
+        e.preventDefault();
+        console.log("Newsletter email:", newsletter);
+    };
     return (
         <div>
             <Navbar />
@@ -36,15 +36,18 @@ const Introduction = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-8 gap-x-16 xl:gap-x-24">
                         {/* Left Column: Impact Heading */}
                         <div className="lg:order-1 lg:col-span-3 mb-8 lg:mb-0">
-                            <h1 className="text-5xl   font-serif newF text-[#202020] leading-tight">
-                                Construction, like gem art, is a creative
-                                process that promises to delight, inspire, and
-                                transform.
-                            </h1>
+                            <img
+                                src="/assets/images/About Us/Asset 13.png"
+                                alt=""
+                            />
                         </div>
 
                         {/* Right Column: Body Text */}
-                        <div className="lg:order-2 lg:col-span-5 space-y-6 text-[#202020] text-sm  r-m mt-16 leading-relaxed">
+                        <div className="lg:order-2 lg:col-span-5 space-y-6 text-[#202020] text-sm  r-m  leading-relaxed">
+                            <h1 className="text-3xl lg:text-5xl   font-serif newF text-[#202020] ">
+                                We build trust that stands tall through
+                                generations
+                            </h1>
                             <p>
                                 Lala Jugal Kishore Construction has secured
                                 pronounced recognition and has become an
@@ -96,7 +99,11 @@ const Introduction = () => {
 
             <section className="">
                 <div className="relative">
-                    <img src="/assets/images/About Us/Asset 2.png" className="lg:h-auto h-[35vh]" alt="" />
+                    <img
+                        src="/assets/images/About Us/Asset 2.png"
+                        className="lg:h-auto h-[35vh]"
+                        alt=""
+                    />
                     <div className="absolute w-full h-full top-0 left-0 ">
                         <div className="max-w-6xl mx-auto px-6 flex flex-col justify-center items-start gap-12 h-full">
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-[500] newF bg-gradient-to-r from-[#9c7948] via-[#f7c073] to-[#fcc06c] bg-clip-text text-transparent ">
@@ -105,9 +112,9 @@ const Introduction = () => {
                             </h1>
                             <p className="text-[#fff] text-sm  max-w-lg leading-relaxed">
                                 Our timeless existence is enhanced by both
-                                tradition and innovation. <br /> Enriching lives has
-                                always been a cultural constant for us, and it
-                                serves as a lens through which we see every
+                                tradition and innovation. <br /> Enriching lives
+                                has always been a cultural constant for us, and
+                                it serves as a lens through which we see every
                                 detail of our work. We're committed to making
                                 your investments a rewarding experience.
                             </p>

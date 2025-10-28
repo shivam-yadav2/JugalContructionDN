@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import GallerySection from "./GallerySection";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const ProjectDetail = () => {
     const [formData, setFormData] = useState({
@@ -271,7 +272,7 @@ const ProjectDetail = () => {
                                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                                 />
                                             </div>
-                                            <h3 className="text-[#ebd2a0] text-center text-sm md:text-base lg:text-lg tracking-[0.15em] uppercase font-[400]">
+                                            <h3 className="text-[#ebd2a0] text-center text-sm md:text-base lg:text-lg tracking-[0.05em] uppercase font-[400]">
                                                 {amenity.title}
                                             </h3>
                                         </div>
@@ -280,37 +281,21 @@ const ProjectDetail = () => {
                             </Swiper>
                         </div>
                     </div>
+
+                    <button
+                        className="absolute swiper-button-prev-custom left-1 lg:left-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all duration-200 group z-10"
+                        aria-label="Previous slide"
+                    >
+                        <ChevronLeft className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
+                    </button>
+
+                    <button
+                        className="absolute swiper-button-next-custom right-1 lg:right-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all duration-200 group z-10"
+                        aria-label="Next slide"
+                    >
+                        <ChevronRight className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
+                    </button>
                     {/* Custom Navigation Buttons */}
-                    <button className="swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center text-white hover:text-[#d1a260] transition-colors duration-300">
-                        <svg
-                            className="w-8 h-8"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M15 19l-7-7 7-7"
-                            />
-                        </svg>
-                    </button>
-                    <button className="swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center text-white hover:text-[#d1a260] transition-colors duration-300">
-                        <svg
-                            className="w-8 h-8"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M9 5l7 7-7 7"
-                            />
-                        </svg>
-                    </button>
                 </div>
 
                 <style jsx>{`
@@ -341,7 +326,11 @@ const ProjectDetail = () => {
                     </h2>
                 </div>
 
-                <img src="/assets/images/Project/Asset 9.png" className="lg:h-auto h-[30vh] object-cover" alt="" />
+                <img
+                    src="/assets/images/Project/Asset 9.png"
+                    className="lg:h-auto h-[30vh] object-cover"
+                    alt=""
+                />
             </section>
 
             <div className="w-full">
@@ -453,9 +442,16 @@ const ProjectDetail = () => {
                 </div>
             </section>
 
-
             <section className="">
-                <iframe className="h-[30vh] lg:h-screen w-full" src="https://www.youtube.com/embed/8DKy8ob_hHo?si=KzYE3N0HU1saYTK6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe
+                    className="h-[30vh] lg:h-screen w-full"
+                    src="https://www.youtube.com/embed/8DKy8ob_hHo?si=KzYE3N0HU1saYTK6"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>
             </section>
 
             {/* Get in Touch Section */}
