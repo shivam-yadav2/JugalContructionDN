@@ -135,6 +135,9 @@ const Contact = () => {
                     </div>
                 </div>
             </section>
+            <div>
+            <iframe className="w-full h-96" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.083481007479!2d80.99579847598541!3d26.869088661962934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be36bd163920f%3A0x739a530477f8ac14!2sLJK%20Construction%20India%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1761718773461!5m2!1sen!2sin"   allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
             <Footer />
         </div>
     );

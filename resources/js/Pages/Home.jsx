@@ -189,7 +189,7 @@ function Home() {
                                 />
 
                                 {/* <h3 className="text-lg tracking-wide mb-2 font-medium">
-                                    JUGAL KISHORE <br /> CONSTRUCTIONS
+                                    JUGAL KISHORE <br /> construction
                                 </h3>
                                 <div>
                                     <img src="" alt="" />

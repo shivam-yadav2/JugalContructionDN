@@ -129,13 +129,13 @@ const Residential = () => {
             />
             <section className="py-16 md:py-20 lg:py-24 bg-[#f1eee7]">
                 <ProjectBanner img={"/assets/images/Project/Asset 15.png"} />
-                <ProjectBannerRight
+                {/* <ProjectBannerRight
                     img={"/assets/images/Project/Asset 14.png"}
                 />
                 <ProjectBanner img={"/assets/images/Project/Asset 13.png"} />
                 <ProjectBannerRight
                     img={"/assets/images/Project/Asset 12.png"}
-                />
+                /> */}
             </section>
             {/* Get in Touch Section */}
             <section className="bg-white  py-20 md:py-32">

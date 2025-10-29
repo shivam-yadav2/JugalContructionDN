@@ -238,7 +238,7 @@ const Navbar = () => {
                     <a href="/">
                         <img
                             src="/assets/images/Homepage/Asset 34.png"
-                            alt="LALA Jugal Kishore Constructions"
+                            alt="LALA Jugal Kishore construction"
                             className="h-12 sm:h-16 lg:h-24 w-auto transition-all duration-300"
                         />
                     </a>
@@ -722,7 +722,7 @@ const Navbar = () => {
             {/* Fixed RERA Button on Right Side */}
             <button
                 // onClick={() => setReraFormOpen(true)}
-                className="fixed top-1/3 right-0 -translate-y-1/2 bg-[#EBD2A0]  text-[#2D1C11] p-2  text-sm shadow-2xl z-40 hover:bg-amber-200 transition-all  duration-300 hover:px-4 text-end"
+                className="fixed hidden top-1/3 right-0 -translate-y-1/2 bg-[#EBD2A0]  text-[#2D1C11] p-2  text-sm shadow-2xl z-40 hover:bg-amber-200 transition-all  duration-300 hover:px-4 text-end"
             >
                 CLICK <br /> HERE <br /> FOR <br /> RERA <br /> DETAILS
             </button>

@@ -31,7 +31,7 @@ const Team = () => {
                             </p>
                             <p className="mt-8 text-[#2D1C11] text-sm leading-relaxed">
                                 Mr. Arpit Rastogi represents the next generation
-                                of leadership at LJK Constructions, bringing
+                                of leadership at LJK construction, bringing
                                 with him a powerful blend of vision, heritage,
                                 and entrepreneurial expertise. A graduate of the
                                 University of Lucknow, he seamlessly integrates
@@ -55,7 +55,7 @@ const Team = () => {
                                 innovation, sustainable growth, and long-term
                                 value creation, inspiring his team to deliver
                                 excellence in every endeavour. Under his
-                                leadership, LJK Constructions is not only
+                                leadership, LJK construction is not only
                                 shaping landmark projects but also creating a
                                 legacy where tradition meets innovation and
                                 every structure reflects trust, excellence, and
@@ -104,7 +104,7 @@ const Team = () => {
                                 structures, but about creating opportunities,
                                 empowering clients to understand investments,
                                 and building lasting relationships. Under his
-                                leadership, LJK Constructions continues to shape
+                                leadership, LJK construction continues to shape
                                 modern infrastructure with a vision that
                                 combines sustainable growth, client trust, and
                                 long-term community impact.

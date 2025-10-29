@@ -30,7 +30,7 @@ const Footer = () => {
                         <div className="lg:col-span-2">
                             <img
                                 src="/assets/images/Homepage/Asset 34.png"
-                                alt="LALA Jugal Kishore Constructions"
+                                alt="LALA Jugal Kishore construction"
                                 className="mb-12 h-36"
                             />
 
@@ -176,7 +176,7 @@ const Footer = () => {
                                     <p className="">
                                         PROMOTER RERA NO.: UPRERAPRM00000
                                     </p>
-                                    <p>PROJECT RERA NO.: UPRERAPRJ00000</p>
+                                    {/* <p>PROJECT RERA NO.: UPRERAPRJ00000</p> */}
                                     <p>
                                         LAUNCH DATE: 00-00-2025 | WEBSITE:
                                         www.up-rera.in
