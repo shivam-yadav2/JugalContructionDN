@@ -52,7 +52,7 @@ const Navbar = () => {
     ];
 
     const projectsSubItems = [
-        { title: "PLOTTED DEVELOPMENT", href: "/projects/plotted-development" },
+        // { title: "PLOTTED DEVELOPMENT", href: "/projects/plotted-development" },
         { title: "RESIDENTIAL PROJECTS", href: "/projects/residential" },
         { title: "COMMERCIAL PROJECTS", href: "/projects/commercial" },
     ];
