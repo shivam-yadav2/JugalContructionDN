@@ -8,7 +8,7 @@ const Team = () => {
         <div>
             <Navbar />
             <BannerComponent
-                imageSrc={"/assets/images/About Us/Asset 8.png"}
+                imageSrc={"/assets/images/About Us/Asset 15.png"}
                 titleText={"Our Team"}
             />
 
@@ -31,35 +31,36 @@ const Team = () => {
                             </p>
                             <p className="mt-8 text-[#2D1C11] text-sm leading-relaxed">
                                 Mr. Arpit Rastogi represents the next generation
-                                of leadership at LJK construction, bringing
-                                with him a powerful blend of vision, heritage,
-                                and entrepreneurial expertise. A graduate of the
-                                University of Lucknow, he seamlessly integrates
+                                of leadership at LJK Construction, bringing a
+                                powerful blend of vision, heritage, and
+                                entrepreneurial expertise. A graduate from the
+                                University of Lucknow, he seamlessly combines
                                 modern business acumen with the deep-rooted
                                 values of his family legacy, shaping both the
-                                culture and long-term vision of the company.
-                                Alongside his role in real estate, Mr. Rastogi
+                                cultural and long-term vision of the company. In
+                                addition to his role in real estate, Mr. Rastogi
                                 also leads Lala Jugal Kishore Jewellers, the
-                                parent company and one of India's most
-                                celebrated jewelry houses with a legacy spanning
-                                generations. His stewardship of the jewelry
-                                vertical reflects his ability to honor tradition
-                                while embracing innovation, ensuring the brand
-                                continues to flourish in a modern era.
+                                parent company and one of India’s most
+                                celebrated jewellery house, with a legacy
+                                spanning generations. His expertise in the
+                                jewellery division exemplifies his ability to
+                                honor tradition while embracing innovation,
+                                ensuring the brand continues to thrive in the
+                                modern era.
                             </p>
                             <p className="mt-2 text-sm text-[#2D1C11] leading-relaxed">
-                                Respected as both a strategic leader and
+                                Respected as both, a strategic leader and a
                                 cultural custodian, he brings fresh perspectives
-                                to every challenge and opportunity. His
-                                leadership is defined by a steadfast focus on
-                                innovation, sustainable growth, and long-term
-                                value creation, inspiring his team to deliver
+                                to challenges and opportunities. His leadership
+                                is defined by a steadfast focus on innovation,
+                                sustainable growth, and long-term value
+                                creation, inspiring his team to deliver
                                 excellence in every endeavour. Under his
-                                leadership, LJK construction is not only
-                                shaping landmark projects but also creating a
-                                legacy where tradition meets innovation and
-                                every structure reflects trust, excellence, and
-                                enduring value.
+                                guidance, LJK Construction is not only shaping
+                                landmark projects but also building a legacy
+                                where tradition meets innovation, and every
+                                structure stands as a testament to trust,
+                                excellence, and enduring value.
                             </p>
                         </div>
                     </div>

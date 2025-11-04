@@ -24,11 +24,11 @@ const ProjectContactFooter = () => {
     return (
         <>
             {/* Project Categories Section */}
-            <section className="grid md:grid-cols-3 space-0 m-0 p-0 overflow-hidden  g-0">
+            <section className="grid md:grid-cols-2 space-0 m-0 p-0 overflow-hidden  g-0">
                 {/* Residential Projects */}
-                <div className="relative h-96 md:h-[650px] group -m-1 p-0  overflow-hidden border-0 border-transparent">
+                <div className="relative  group -m-1 p-0  overflow-hidden border-0 border-transparent">
                     <img
-                        src="/assets/images/home/Asset 21.png"
+                        src="/assets/images/home/Asset 56.png"
                         alt="Residential Projects"
                         className="w-full h-full object-cover"
                     />
@@ -47,9 +47,9 @@ const ProjectContactFooter = () => {
                 </div>
 
                 {/* Commercial Projects */}
-                <div className="relative h-96 md:h-[650px] group -m-1 p-0  overflow-hidden border-0 border-transparent">
+                <div className="relative  group -m-1 p-0  overflow-hidden border-0 border-transparent">
                     <img
-                        src="/assets/images/Homepage/Asset 19.png"
+                        src="/assets/images/home/Asset 55.png"
                         alt="Commercial Projects"
                         className="w-full h-full object-cover"
                     />
@@ -67,26 +67,7 @@ const ProjectContactFooter = () => {
                     </div>
                 </div>
 
-                {/* Plotted Development */}
-                <div className="relative h-96 md:h-[650px] group -m-1 p-0  overflow-hidden border-0 border-transparent">
-                    <img
-                        src="/assets/images/home/Asset 20.png"
-                        alt="Plotted Development"
-                        className="w-full h-full object-cover"
-                    />
-
-                    <div className="absolute inset-0 flex flex-col items-center mb-6 justify-end py-5 text-center px-6">
-                        <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif newF bg-gradient-to-r from-[#a88451] via-[#b38e5a] to-[#eebe7a] bg-clip-text text-transparent mb-6">
-                            Plotted Development
-                        </h3>
-                        <button
-                                    variant="outline"
-                                    className=" inline-flex items-center tracking-widest text-[#fcc06c]  hover:text-white r-m transition-colors duration-200 group text-lg"
-                                >
-                                    KNOW MORE <MoveRight />
-                                </button>
-                    </div>
-                </div>
+                
             </section>
 
             {/* Get in Touch Section */}

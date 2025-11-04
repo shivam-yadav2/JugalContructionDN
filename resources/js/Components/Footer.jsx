@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Facebook, Instagram, Youtube, Linkedin, Send } from "lucide-react";
+import { router } from "@inertiajs/react";
 
 const Footer = () => {
     const [formData, setFormData] = useState({
@@ -13,7 +14,20 @@ const Footer = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Form submitted:", formData);
+        router.post('/enquiry', {
+            name: formData.fullName,
+            phone: formData.phone,
+            email: formData.email,
+            message: formData.message,
+        }, {
+            onSuccess: () => {
+                setFormData({ fullName: "", phone: "", email: "", message: "" });
+                alert('Thank you for your enquiry. We will get back to you soon!');
+            },
+            onError: (errors) => {
+                console.error('Form submission errors:', errors);
+            },
+        });
     };
 
     const handleNewsletterSubmit = (e) => {
@@ -63,44 +77,44 @@ const Footer = () => {
                         <div>
                             <nav className="space-y-4">
                                 <a
-                                    href="#home"
-                                    className="block text-[#EBD2A0]"
+                                    href="/"
+                                    className="block text-[#EBD2A0] hover:text-white transition-colors"
                                 >
                                     Home
                                 </a>
                                 <a
-                                    href="#about"
-                                    className="block text-[#EBD2A0]"
+                                    href="/about/introduction"
+                                    className="block text-[#EBD2A0] hover:text-white transition-colors"
                                 >
                                     About Us
                                 </a>
                                 <a
-                                    href="#projects"
-                                    className="block text-[#EBD2A0]"
+                                    href="/projects/residential"
+                                    className="block text-[#EBD2A0] hover:text-white transition-colors"
                                 >
                                     Projects
                                 </a>
                                 <a
-                                    href="#media"
-                                    className="block text-[#EBD2A0]"
+                                    href="/media/press-coverage"
+                                    className="block text-[#EBD2A0] hover:text-white transition-colors"
                                 >
                                     Media
                                 </a>
                                 <a
-                                    href="#blog"
-                                    className="block text-[#EBD2A0]"
+                                    href="/blog"
+                                    className="block text-[#EBD2A0] hover:text-white transition-colors"
                                 >
                                     Blog
                                 </a>
                                 <a
-                                    href="#career"
-                                    className="block text-[#EBD2A0]"
+                                    href="/career"
+                                    className="block text-[#EBD2A0] hover:text-white transition-colors"
                                 >
                                     Career
                                 </a>
                                 <a
-                                    href="#contact"
-                                    className="block text-[#EBD2A0]"
+                                    href="/contact-us"
+                                    className="block text-[#EBD2A0] hover:text-white transition-colors"
                                 >
                                     Contact Us
                                 </a>
@@ -165,22 +179,13 @@ const Footer = () => {
                             </div>
                             <div className="flex mt-8 gap-6">
                                 {/* RERA QR Code */}
-                                <div className=" bg-white  inline-block">
-                                    <img
-                                        src="/assets/images/home/Asset 29.png"
-                                        alt="RERA QR Code"
-                                        className=""
-                                    />
-                                </div>
+
                                 <div className="mt-2 text-xs">
                                     <p className="">
-                                        PROMOTER RERA NO.: UPRERAPRM00000
+                                        PROMOTER RERA NO. : UPRERAPRM219774
                                     </p>
                                     {/* <p>PROJECT RERA NO.: UPRERAPRJ00000</p> */}
-                                    <p>
-                                        LAUNCH DATE: 00-00-2025 | WEBSITE:
-                                        www.up-rera.in
-                                    </p>
+                                    <p>WEBSITE: www.up-rera.in</p>
                                     <p>Bank: | A/c No:</p>
                                     <p>Branch:</p>
                                 </div>

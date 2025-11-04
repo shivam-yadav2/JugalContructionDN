@@ -16,7 +16,7 @@ const HeroSlider = () => {
     const prev = () => setCurrent((current - 1 + totalSlides) % totalSlides);
 
     return (
-        <div className="relative h-screen w-full overflow-hidden">
+        <div className="relative h-[85vh] w-full overflow-hidden">
             {/* ---------------- SLIDE 1 ---------------- */}
             <div
                 className={`absolute inset-0 transition-opacity duration-1000 ${
@@ -24,7 +24,7 @@ const HeroSlider = () => {
                 }`}
             >
                 <img
-                    src="/assets/images/home/Asset 4.png"
+                    src="/assets/images/home/Asset 48.png"
                     alt="Building Landmarks"
                     className="w-full h-full object-cover"
                 />
@@ -50,7 +50,7 @@ const HeroSlider = () => {
                 }`}
             >
                 <img
-                    src="/assets/images/home/Asset 32.png"
+                    src="/assets/images/home/Asset 47.png"
                     alt="Crafting Dream Homes"
                     className="w-full h-full object-cover"
                 />
@@ -60,7 +60,7 @@ const HeroSlider = () => {
                 <div className="absolute inset-0  flex items-center flex-col justify-center pb-24">
                     <div className=" w-full h-full flex items-center  justify-center  ">
                         <img
-                            src="/assets/images/home/Asset 7.png"
+                            src="/assets/images/home/Asset 52.png"
                             alt="Logo Accent"
                             className="mt-24"
                         />
@@ -83,7 +83,7 @@ const HeroSlider = () => {
                 }`}
             >
                 <img
-                    src="/assets/images/home/Asset 31.png"
+                    src="/assets/images/home/Asset 46.png"
                     alt="Excellence in Construction"
                     className="w-full h-full object-cover"
                 />

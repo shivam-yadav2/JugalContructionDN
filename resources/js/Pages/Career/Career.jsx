@@ -22,7 +22,7 @@ const Career = () => {
         <div>
             <Navbar />
             <BannerComponent
-                imageSrc={"/assets/images/Career/Asset 2.png"}
+                imageSrc={"/assets/images/Career/Asset 4.png"}
                 titleText={"Career"}
             />
             <section className="max-w-6xl mx-auto py-16 md:py-20 lg:py-24 lg:px-0 px-5">
@@ -46,12 +46,15 @@ const Career = () => {
                     </h2>
                 </div>
             </section>
-            <div className="w-full">
+            <div className="w-full relative">
                 <img
                     src="/assets/images/Career/Asset 1.png" // Replace with the actual image URL
                     alt="Person walking up stairs"
                     className="w-full h-[30vh] lg:h-auto object-cover "
                 />
+                <h1 className="absolute text-white/80 -left-8 bottom-12 -rotate-90 ">
+                    #stockimage
+                </h1>
             </div>
 
             <section className="bg-white py-16 md:py-20 lg:py-24">

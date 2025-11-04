@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { usePage } from "@inertiajs/react";
+import { usePage, router } from "@inertiajs/react";
 import {
     Dialog,
     DialogContent,
@@ -54,7 +54,7 @@ const Navbar = () => {
     const projectsSubItems = [
         // { title: "PLOTTED DEVELOPMENT", href: "/projects/plotted-development" },
         { title: "RESIDENTIAL PROJECTS", href: "/projects/residential" },
-        { title: "COMMERCIAL PROJECTS", href: "/projects/commercial" },
+        { title: "COMMERCIAL PROJECTS", href: "#" },
     ];
 
     const mediaSubItems = [
@@ -70,11 +70,34 @@ const Navbar = () => {
         }));
     };
 
-    const handleSubmit = () => {
-        console.log("Form submitted:", formData);
-        // Handle form submission here (send to backend, etc.)
-        setFormData({ fullName: "", phone: "", email: "", message: "" });
-        setEnquireOpen(false);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        router.post(
+            "/enquiry",
+            {
+                name: formData.fullName,
+                phone: formData.phone,
+                email: formData.email,
+                message: formData.message,
+            },
+            {
+                onSuccess: () => {
+                    setFormData({
+                        fullName: "",
+                        phone: "",
+                        email: "",
+                        message: "",
+                    });
+                    setEnquireOpen(false);
+                    alert(
+                        "Thank you for your enquiry. We will get back to you soon!"
+                    );
+                },
+                onError: (errors) => {
+                    console.error("Form submission errors:", errors);
+                },
+            }
+        );
     };
 
     const isAboutUsActive = () => {
@@ -316,31 +339,84 @@ const Navbar = () => {
 
                                         {projectsDropdownOpen && (
                                             <div
-                                                className="absolute top-full left-0 mt-2 w-60 bg-[#ebd2a0] shadow-xl z-50"
+                                                className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[450px] bg-[#ebd2a0] shadow-xl z-50 p-4"
                                                 onMouseLeave={
                                                     closeProjectsDropdown
                                                 }
                                             >
-                                                {projectsSubItems.map(
-                                                    (subItem) => (
-                                                        <a
-                                                            key={subItem.title}
-                                                            href={subItem.href}
-                                                            className={`block px-6 py-2 text-[#2D1C11] hover:bg-[#fff] transition-colors duration-200 font-medium text-sm ${
-                                                                isSubItemActive(
-                                                                    subItem.href
-                                                                )
-                                                                    ? "bg-white"
-                                                                    : ""
-                                                            }`}
-                                                            onClick={
-                                                                closeProjectsDropdown
-                                                            }
-                                                        >
-                                                            {subItem.title}
-                                                        </a>
-                                                    )
-                                                )}
+                                                <div className="grid grid-cols-2 gap-6">
+                                                    {/* Residential Projects Column */}
+                                                    <div className="border-r-2 border-white p-2">
+                                                        <h3 className="font-bold text-[#2D1C11] mb-3 text-sm uppercase">
+                                                            Residential Projects
+                                                        </h3>
+                                                        <div className="">
+                                                            <a
+                                                                href="/projects/residential"
+                                                                className="block text-[#2D1C11] hover:text-[#9c7948] hover:bg-white p-1 transition-colors duration-200 text-sm"
+                                                                onClick={
+                                                                    closeProjectsDropdown
+                                                                }
+                                                            >
+                                                                LJK VASTO
+                                                            </a>
+                                                            <a
+                                                                href="#"
+                                                                className="block text-[#2D1C11] hover:text-[#9c7948] hover:bg-white p-1 transition-colors duration-200 text-sm"
+                                                                onClick={
+                                                                    closeProjectsDropdown
+                                                                }
+                                                            >
+                                                                LOREM IPSUM
+                                                            </a>
+                                                            <a
+                                                                href="#"
+                                                                className="block text-[#2D1C11] hover:text-[#9c7948] hover:bg-white p-1 transition-colors duration-200 text-sm"
+                                                                onClick={
+                                                                    closeProjectsDropdown
+                                                                }
+                                                            >
+                                                                LOREM IPSUM
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    {/* Commercial Projects Column */}
+                                                    <div className="p-2">
+                                                        <h3 className="font-bold text-[#2D1C11] mb-3 text-sm uppercase">
+                                                            Commercial Projects
+                                                        </h3>
+                                                        <div className="">
+                                                            <a
+                                                                href="#"
+                                                                className="block text-[#2D1C11] hover:text-[#9c7948] hover:bg-white p-1 transition-colors duration-200 text-sm"
+                                                                onClick={
+                                                                    closeProjectsDropdown
+                                                                }
+                                                            >
+                                                                LOREM IPSUM
+                                                            </a>
+                                                            <a
+                                                                href="#"
+                                                                className="block text-[#2D1C11] hover:text-[#9c7948] hover:bg-white p-1 transition-colors duration-200 text-sm"
+                                                                onClick={
+                                                                    closeProjectsDropdown
+                                                                }
+                                                            >
+                                                                LOREM IPSUM
+                                                            </a>
+                                                            <a
+                                                                href="#"
+                                                                className="block text-[#2D1C11] hover:text-[#9c7948] hover:bg-white p-1 transition-colors duration-200 text-sm"
+                                                                onClick={
+                                                                    closeProjectsDropdown
+                                                                }
+                                                            >
+                                                                LOREM IPSUM
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         )}
                                     </div>
@@ -534,25 +610,116 @@ const Navbar = () => {
                                         />
                                     </button>
                                     {mobileProjectsOpen && (
-                                        <div className="ml-4 mt-2 space-y-2">
-                                            {projectsSubItems.map((subItem) => (
-                                                <a
-                                                    key={subItem.title}
-                                                    href={subItem.href}
-                                                    className={`block text-sm py-2 transition-colors duration-200 ${
-                                                        isSubItemActive(
-                                                            subItem.href
-                                                        )
-                                                            ? "text-amber-200 font-medium"
-                                                            : "text-[#ebd2a0] hover:text-amber-200"
-                                                    }`}
-                                                    onClick={() =>
-                                                        setMenuOpen(false)
-                                                    }
-                                                >
-                                                    {subItem.title}
-                                                </a>
-                                            ))}
+                                        <div className="mt-4 bg-[#ebd2a0] p-4 rounded-md space-y-4">
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                                {/* Residential Projects Column */}
+                                                <div className="border-b-2 sm:border-b-0 sm:border-r-2 border-white pb-4 sm:pb-0 sm:pr-4">
+                                                    <h3 className="font-bold text-[#2D1C11] mb-3 text-sm uppercase">
+                                                        Residential Projects
+                                                    </h3>
+                                                    <div className="space-y-1">
+                                                        <a
+                                                            href="/projects/residential"
+                                                            className={`block text-[#2D1C11] hover:text-[#9c7948] hover:bg-white p-2 transition-colors duration-200 text-sm rounded ${
+                                                                isSubItemActive(
+                                                                    "/projects/residential"
+                                                                )
+                                                                    ? "bg-white text-[#9c7948]"
+                                                                    : ""
+                                                            }`}
+                                                            onClick={() => {
+                                                                setMenuOpen(
+                                                                    false
+                                                                );
+                                                                setMobileProjectsOpen(
+                                                                    false
+                                                                );
+                                                            }}
+                                                        >
+                                                            LJK VASTO
+                                                        </a>
+                                                        <a
+                                                            href="#"
+                                                            className="block text-[#2D1C11] hover:text-[#9c7948] hover:bg-white p-2 transition-colors duration-200 text-sm rounded"
+                                                            onClick={() => {
+                                                                setMenuOpen(
+                                                                    false
+                                                                );
+                                                                setMobileProjectsOpen(
+                                                                    false
+                                                                );
+                                                            }}
+                                                        >
+                                                            LOREM IPSUM
+                                                        </a>
+                                                        <a
+                                                            href="#"
+                                                            className="block text-[#2D1C11] hover:text-[#9c7948] hover:bg-white p-2 transition-colors duration-200 text-sm rounded"
+                                                            onClick={() => {
+                                                                setMenuOpen(
+                                                                    false
+                                                                );
+                                                                setMobileProjectsOpen(
+                                                                    false
+                                                                );
+                                                            }}
+                                                        >
+                                                            LOREM IPSUM
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                {/* Commercial Projects Column */}
+                                                <div className="pt-4 sm:pt-0 sm:pl-4">
+                                                    <h3 className="font-bold text-[#2D1C11] mb-3 text-sm uppercase">
+                                                        Commercial Projects
+                                                    </h3>
+                                                    <div className="space-y-1">
+                                                        <a
+                                                            href="#"
+                                                            className="block text-[#2D1C11] hover:text-[#9c7948] hover:bg-white p-2 transition-colors duration-200 text-sm rounded"
+                                                            onClick={() => {
+                                                                setMenuOpen(
+                                                                    false
+                                                                );
+                                                                setMobileProjectsOpen(
+                                                                    false
+                                                                );
+                                                            }}
+                                                        >
+                                                            LOREM IPSUM
+                                                        </a>
+                                                        <a
+                                                            href="#"
+                                                            className="block text-[#2D1C11] hover:text-[#9c7948] hover:bg-white p-2 transition-colors duration-200 text-sm rounded"
+                                                            onClick={() => {
+                                                                setMenuOpen(
+                                                                    false
+                                                                );
+                                                                setMobileProjectsOpen(
+                                                                    false
+                                                                );
+                                                            }}
+                                                        >
+                                                            LOREM IPSUM
+                                                        </a>
+                                                        <a
+                                                            href="#"
+                                                            className="block text-[#2D1C11] hover:text-[#9c7948] hover:bg-white p-2 transition-colors duration-200 text-sm rounded"
+                                                            onClick={() => {
+                                                                setMenuOpen(
+                                                                    false
+                                                                );
+                                                                setMobileProjectsOpen(
+                                                                    false
+                                                                );
+                                                            }}
+                                                        >
+                                                            LOREM IPSUM
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     )}
                                 </>
@@ -648,62 +815,67 @@ const Navbar = () => {
                         </DialogTitle>
                     </DialogHeader>
 
-                    <div className="space-y-4 px-4 pb-4">
-                        <input
-                            type="text"
-                            name="fullName"
-                            placeholder="FULL NAME"
-                            value={formData.fullName}
-                            onChange={handleInputChange}
-                            className="w-full px-4 py-3 bg-[#f1eee7] text-sm outline-none border-none focus:outline-none focus:ring-2 focus:ring-[#EBD2A0] transition-all"
-                        />
-
-                        <div className="grid md:grid-cols-2 gap-4">
-                            <div className="relative">
-                                <input
-                                    type="tel"
-                                    name="phone"
-                                    placeholder="PHONE"
-                                    value={formData.phone}
-                                    onChange={handleInputChange}
-                                    className="w-full px-4 py-3 pl-16 bg-[#f1eee7] text-sm outline-none border-none focus:outline-none focus:ring-2 focus:ring-[#EBD2A0] transition-all"
-                                />
-                                <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-1">
-                                    <span className="text-lg">🇮🇳</span>
-                                    <span className="text-gray-400 text-sm">
-                                        ▼
-                                    </span>
-                                </div>
-                            </div>
-
+                    <form onSubmit={handleSubmit}>
+                        <div className="space-y-4 px-4 pb-4">
                             <input
-                                type="email"
-                                name="email"
-                                placeholder="EMAIL"
-                                value={formData.email}
+                                type="text"
+                                name="fullName"
+                                placeholder="FULL NAME"
+                                value={formData.fullName}
                                 onChange={handleInputChange}
                                 className="w-full px-4 py-3 bg-[#f1eee7] text-sm outline-none border-none focus:outline-none focus:ring-2 focus:ring-[#EBD2A0] transition-all"
+                                required
                             />
-                        </div>
 
-                        <textarea
-                            name="message"
-                            placeholder="MESSAGE"
-                            rows="5"
-                            value={formData.message}
-                            onChange={handleInputChange}
-                            className="w-full px-4 py-3 bg-[#f1eee7] text-sm outline-none border-none focus:outline-none focus:ring-2 focus:ring-[#EBD2A0] transition-all resize-none"
-                        ></textarea>
+                            <div className="grid md:grid-cols-2 gap-4">
+                                <div className="relative">
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        placeholder="PHONE"
+                                        value={formData.phone}
+                                        onChange={handleInputChange}
+                                        className="w-full px-4 py-3 pl-16 bg-[#f1eee7] text-sm outline-none border-none focus:outline-none focus:ring-2 focus:ring-[#EBD2A0] transition-all"
+                                        required
+                                    />
+                                    <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-1">
+                                        <span className="text-lg">🇮🇳</span>
+                                        <span className="text-gray-400 text-sm">
+                                            ▼
+                                        </span>
+                                    </div>
+                                </div>
 
-                        <div className="flex justify-center pt-4">
-                            <button
-                                onClick={handleSubmit}
-                                className="bg-[#EBD2A0] text-black px-8 py-3 tracking-widest font-medium hover:bg-amber-200 transition-colors duration-200"
-                            >
-                                SUBMIT
-                            </button>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="EMAIL"
+                                    value={formData.email}
+                                    onChange={handleInputChange}
+                                    className="w-full px-4 py-3 bg-[#f1eee7] text-sm outline-none border-none focus:outline-none focus:ring-2 focus:ring-[#EBD2A0] transition-all"
+                                    required
+                                />
+                            </div>
+
+                            <textarea
+                                name="message"
+                                placeholder="MESSAGE"
+                                rows="5"
+                                value={formData.message}
+                                onChange={handleInputChange}
+                                className="w-full px-4 py-3 bg-[#f1eee7] text-sm outline-none border-none focus:outline-none focus:ring-2 focus:ring-[#EBD2A0] transition-all resize-none"
+                            ></textarea>
+
+                            <div className="flex justify-center pt-4">
+                                <button
+                                    onClick={handleSubmit}
+                                    className="bg-[#EBD2A0] text-black px-8 py-3 tracking-widest font-medium hover:bg-amber-200 transition-colors duration-200"
+                                >
+                                    SUBMIT
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </DialogContent>
             </Dialog>
             {/* ---------- WhatsApp Button ---------- */}
@@ -735,7 +907,7 @@ const Navbar = () => {
             >
                 <button
                     onClick={() => setReraFormOpen(false)}
-                    className="absolute top-4 right-4 text-[#2D1C11] hover:text-[#9c7948] transition-colors"
+                    className="absolute top-4 right-4 text-[#2D1C11] hover:text-[#9c7948] hover:bg-white p-1 transition-colors"
                     aria-label="Close RERA form"
                 >
                     <X size={28} />

@@ -2,8 +2,7 @@ import BannerComponent from "@/Components/BannerComponent";
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
 import React, { useState } from "react";
-import { Link } from "@inertiajs/react";
-
+import { Link, router } from "@inertiajs/react";
 
 function ProjectBanner({ img }) {
     return (
@@ -23,20 +22,23 @@ function ProjectBanner({ img }) {
                     {/* Brown Box - Left Side */}
                     <div className="bg-[#2D1C11] col-span-4 flex flex-col ml-[80px] justify-center items-center px-8 py-10 md:px-12 md:py-12 lg:px-16 lg:py-16">
                         {/* Project Name */}
-                        <h1 className="text-3xl newF pb-1 md:text-4xl lg:text-5xl font-[500] bg-gradient-to-r from-[#9c7948] via-[#d1a260] to-[#fcc06c] bg-clip-text text-transparent mb-2">
+                        {/* <h1 className="text-3xl newF pb-1 md:text-4xl lg:text-5xl font-[500] bg-gradient-to-r from-[#9c7948] via-[#d1a260] to-[#fcc06c] bg-clip-text text-transparent mb-2">
                             Project Name
                         </h1>
 
-                        {/* Location & Details Subtitle */}
                         <h2 className="text-[#ebd2a0] text-sm tracking-[0.2em] uppercase mb-6 font-[400]">
                             PROJECT LOCATION & DETAILS
-                        </h2>
+                        </h2> */}
+                        <img
+                            src="/assets/images/home/Asset 52.png"
+                            className="w-1/2"
+                            alt=""
+                        />
 
                         {/* Description Text */}
-                        <p className="text-white text-center text-sm md:text-base lg:text-lg leading-relaxed mb-0 font-[300]">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing
-                            elit, sed diam nonummy nibh euismod tincidunt ut
-                            laoreet dolore magna aliquam erat volutpat.
+                        <p className="text-white text-center text-sm md:text-base lg:text-md leading-relaxed mt-6 mb-0 font-[300]">
+                            Where luxury and lifestyle meet in perfect harmony,
+                            and the possibilities are truly endless
                         </p>
                     </div>
 
@@ -113,7 +115,20 @@ const Residential = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Form submitted:", formData);
+        router.post('/enquiry', {
+            name: formData.fullName,
+            phone: formData.phone,
+            email: formData.email,
+            message: formData.message,
+        }, {
+            onSuccess: () => {
+                setFormData({ fullName: "", phone: "", email: "", message: "" });
+                alert('Thank you for your enquiry. We will get back to you soon!');
+            },
+            onError: (errors) => {
+                console.error('Form submission errors:', errors);
+            },
+        });
     };
 
     const handleNewsletterSubmit = (e) => {
@@ -128,7 +143,7 @@ const Residential = () => {
                 titleText={"Residential Development"}
             />
             <section className="py-16 md:py-20 lg:py-24 bg-[#f1eee7]">
-                <ProjectBanner img={"/assets/images/Project/Asset 15.png"} />
+                <ProjectBanner img={"/assets/images/home/Asset 50.png"} />
                 {/* <ProjectBannerRight
                     img={"/assets/images/Project/Asset 14.png"}
                 />
@@ -147,7 +162,7 @@ const Residential = () => {
                                 Get in touch
                             </h2>
 
-                            <div className="space-y-4">
+                            <form onSubmit={handleSubmit} className="space-y-4">
                                 <input
                                     type="text"
                                     placeholder="FULL NAME"
@@ -159,6 +174,7 @@ const Residential = () => {
                                         })
                                     }
                                     className="w-full px-4 py-3 bg-[#f1eee7]  text-sm outline-none border-none focus:outline-none focus:border-none focus:ring-0"
+                                    required
                                 />
 
                                 <div className="grid md:grid-cols-2 gap-4">
@@ -174,6 +190,7 @@ const Residential = () => {
                                                 })
                                             }
                                             className="w-full px-4 py-3 pl-16  bg-[#f1eee7]  text-sm outline-none border-none focus:outline-none focus:border-none focus:ring-0"
+                                            required
                                         />
                                         <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-1">
                                             <span className="text-orange-500 text-lg">
@@ -196,6 +213,7 @@ const Residential = () => {
                                             })
                                         }
                                         className="w-full px-4 py-3 bg-[#f1eee7]  text-sm outline-none border-none focus:outline-none focus:border-none focus:ring-0"
+                                        required
                                     />
                                 </div>
 
@@ -213,12 +231,12 @@ const Residential = () => {
                                 ></textarea>
 
                                 <button
-                                    onClick={handleSubmit}
+                                    type="submit"
                                     className="bg-[#EBD2A0]  text-black r-m  px-8 py-3  tracking-widest transition-colors duration-200"
                                 >
                                     SUBMIT
                                 </button>
-                            </div>
+                            </form>
                         </div>
 
                         {/* Map */}

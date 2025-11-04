@@ -59,65 +59,86 @@ export default function GallerySection() {
                 {/* Gallery Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-2  auto-rows-[200px] md:auto-rows-[250px]">
                     {/* Image 1 - Living Room (Tall) */}
-                    <div className="col-span-1 row-span-2 overflow-hidden group cursor-pointer">
+                    <div className="col-span-1 relative row-span-2 overflow-hidden group cursor-pointer">
                         <img
                             src={galleryImages[0].src}
                             alt={galleryImages[0].alt}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            className="w-full h-full  object-cover transition-transform duration-500 group-hover:scale-110"
                         />
+                        <h1 className="absolute text-white/80 -left-8 bottom-12 -rotate-90 ">
+                            #stockimage
+                        </h1>
                     </div>
 
                     {/* Image 2 - Kitchen */}
-                    <div className="col-span-1 row-span-1 overflow-hidden group cursor-pointer">
+                    <div className="col-span-1 relative row-span-1 overflow-hidden group cursor-pointer">
                         <img
                             src={galleryImages[1].src}
                             alt={galleryImages[1].alt}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            className="w-full h-full  object-cover transition-transform duration-500 group-hover:scale-110"
                         />
+                        <h1 className="absolute text-white/80 -left-8 bottom-12 -rotate-90 ">
+                            #stockimage
+                        </h1>
                     </div>
 
                     {/* Image 4 - Bedroom (Tall) */}
-                    <div className="col-span-2 row-span-2 overflow-hidden group cursor-pointer">
+                    <div className="col-span-2 relative row-span-2 overflow-hidden group cursor-pointer">
                         <img
                             src={galleryImages[3].src}
                             alt={galleryImages[3].alt}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            className="w-full h-full  object-cover transition-transform duration-500 group-hover:scale-110"
                         />
+                        <h1 className="absolute text-white/80 -left-8 bottom-12 -rotate-90 ">
+                            #stockimage
+                        </h1>
                     </div>
 
                     {/* Image 5 - Bedroom 2 */}
-                    <div className="col-span-1 row-span-1 overflow-hidden group cursor-pointer">
+                    <div className="col-span-1 relative row-span-1 overflow-hidden group cursor-pointer">
                         <img
                             src={galleryImages[4].src}
                             alt={galleryImages[4].alt}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            className="w-full h-full  object-cover transition-transform duration-500 group-hover:scale-110"
                         />
+                        <h1 className="absolute text-white/80 -left-8 bottom-12 -rotate-90 ">
+                            #stockimage
+                        </h1>
                     </div>
 
                     {/* Image 6 - Kitchen 2 */}
-                    <div className="col-span-2 row-span-1 overflow-hidden group cursor-pointer">
+                    <div className="col-span-2 relative row-span-1 overflow-hidden group cursor-pointer">
                         <img
                             src={galleryImages[5].src}
                             alt={galleryImages[5].alt}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            className="w-full h-full  object-cover transition-transform duration-500 group-hover:scale-110"
                         />
+                        <h1 className="absolute text-white/80 -left-8 bottom-12 -rotate-90 ">
+                            #stockimage
+                        </h1>
                     </div>
 
                     {/* Image 7 - Bathroom 2 */}
-                    <div className="col-span-1 row-span-1 overflow-hidden group cursor-pointer">
+                    <div className="col-span-1 relative row-span-1 overflow-hidden group cursor-pointer">
                         <img
                             src={galleryImages[6].src}
                             alt={galleryImages[6].alt}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            className="w-full h-full  object-cover transition-transform duration-500 group-hover:scale-110"
                         />
+                        <h1 className="absolute text-white/80 -left-8 bottom-12 -rotate-90 ">
+                            #stockimage
+                        </h1>
                     </div>
 
-                    <div className="col-span-1 row-span-1 overflow-hidden group cursor-pointer">
+                    <div className="col-span-1 relative row-span-1 overflow-hidden group cursor-pointer">
                         <img
                             src={galleryImages[2].src}
                             alt={galleryImages[2].alt}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            className="w-full h-full  object-cover transition-transform duration-500 group-hover:scale-110"
                         />
+                        <h1 className="absolute text-white/80 -left-8 bottom-12 -rotate-90 ">
+                            #stockimage
+                        </h1>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@ const Blog = () => {
             <Navbar />
 
             <BannerComponent
-                imageSrc="/assets/images/Blog/Asset 1.png"
+                imageSrc="/assets/images/Blog/Asset 4.png"
                 titleText="Blog"
             />
 
@@ -53,12 +53,15 @@ const Blog = () => {
                     </div>
 
                     {/* Right Image Section */}
-                    <div className="w-full h-full">
+                    <div className="w-full relative h-full">
                         <img
                             src="/assets/images/Blog/Asset 2.png"
                             alt="Blog Image"
                             className="w-full h-full object-cover"
                         />
+                        <h1 className="absolute text-white/80 -left-8 bottom-12 -rotate-90 ">
+                    #stockimage
+                </h1>
                     </div>
                 </div>
             </section>
@@ -66,17 +69,20 @@ const Blog = () => {
             <section className="max-w-6xl mx-auto py-10 md:py-20 lg:pb-28 px-4">
                 <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:gap-0 gap-6">
                     {/* Right Image Section */}
-                    <div className="w-full h-full order-1 md:order-2">
+                    <div className="w-full relative h-full order-1 md:order-2">
                         <img
                             src="/assets/images/Blog/Asset 2.png"
                             alt="Blog Image"
                             className="w-full h-full object-cover"
                         />
+                        <h1 className="absolute text-white/80 -left-8 bottom-12 -rotate-90 ">
+                    #stockimage
+                </h1>
                     </div>
 
                     {/* Left Text Section */}
                     <div
-                        className="w-full flex flex-col justify-between p-4 sm:p-6 md:p-12 bg-gray-100 order-2 md:order-1"
+                        className="w-full flex flex-col justify-between p-4 sm:p-6 md:p-12 bg-gray-100 order-2 md:order-2"
                         style={{ backgroundColor: "#f5f1e9" }}
                     >
                         <div className="text-base sm:text-lg md:text-xl font-semibold text-[#2D1C11]">

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import PrFooter from "../Components/PrFooter";
 import { MoveRight } from "lucide-react";
 import Footer from "@/Components/Footer";
+import { Link } from "@inertiajs/react";
 
 function Home() {
     return (
@@ -46,7 +47,7 @@ function Home() {
                                 </p>
                             </div>
 
-                            <button className="mt-10 inline-flex items-center tracking-widest text-[#fcc06c]  hover:text-white r-m transition-colors duration-200 group text-lg">
+                            <Link href="/about/introduction" className="mt-10 inline-flex items-center tracking-widest text-[#fcc06c]  hover:text-white r-m transition-colors duration-200 group text-lg">
                                 KNOW MORE
                                 <svg
                                     className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform duration-200"
@@ -61,7 +62,7 @@ function Home() {
                                         d="M17 8l4 4m0 0l-4 4m4-4H3"
                                     />
                                 </svg>
-                            </button>
+                            </Link>
                         </div>
 
                         {/* Right Image with Frame Structure */}
@@ -71,7 +72,7 @@ function Home() {
                                 {/* Main living room image */}
                                 <div className="relative">
                                     <img
-                                        src="/assets/images/home/Asset 5.png"
+                                        src="/assets/images/home/Asset 49.png"
                                         alt="Modern living room interior"
                                         className="w-full h-auto object-cover"
                                     />
@@ -161,7 +162,7 @@ function Home() {
                         <div className="absolute left-0 top-0 bottom-0 lg:w-1/2 lg:p-0 p-6 lg:py-16">
                             <div className="relative lg:block hidden w-full h-full  shadow-lg">
                                 <img
-                                    src="/assets/images/home/Asset 6.png"
+                                    src="/assets/images/home/Asset 50.png"
                                     alt="Vasto"
                                     className="w-full h-full object-cover"
                                 />
@@ -183,7 +184,7 @@ function Home() {
                                 </h2>
 
                                 <img
-                                    src="/assets/images/home/Asset 7.png" // your LALA logo
+                                    src="/assets/images/home/Asset 52.png" // your LALA logo
                                     alt="LALA logo"
                                     className="mx-auto md:mx-0 mb-4"
                                 />
@@ -204,12 +205,12 @@ function Home() {
                                     endless.
                                 </p>
 
-                                <button
+                                <Link href="/project-detail"
                                     variant="outline"
                                     className=" inline-flex items-center tracking-widest text-[#fcc06c]  hover:text-white r-m transition-colors duration-200 group text-lg"
                                 >
                                     KNOW MORE <MoveRight />
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

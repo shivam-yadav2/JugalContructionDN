@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import GallerySection from "./GallerySection";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { router } from "@inertiajs/react";
 
 const ProjectDetail = () => {
     const [formData, setFormData] = useState({
@@ -22,7 +23,20 @@ const ProjectDetail = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Form submitted:", formData);
+        router.post('/enquiry', {
+            name: formData.fullName,
+            phone: formData.phone,
+            email: formData.email,
+            message: formData.message,
+        }, {
+            onSuccess: () => {
+                setFormData({ fullName: "", phone: "", email: "", message: "" });
+                alert('Thank you for your enquiry. We will get back to you soon!');
+            },
+            onError: (errors) => {
+                console.error('Form submission errors:', errors);
+            },
+        });
     };
 
     const handleNewsletterSubmit = (e) => {
@@ -168,8 +182,11 @@ const ProjectDetail = () => {
                     alt="Crafting Dream Homes"
                     className="w-full h-[40vh] lg:h-full object-cover"
                 />
-                <div className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-amber-950/90 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-amber-950/80 to-transparent" />
+                <h1 className="absolute text-white/80 -left-8 bottom-12 -rotate-90 ">
+                    #stockimage
+                </h1>
+                <div className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-[#1a3d3d]/90 to-transparent" />
+                {/* <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#1a3d3d]/80 to-transparent" /> */}
 
                 <div className="absolute inset-0  flex items-center flex-col justify-center pb-24">
                     <div className=" w-full h-full flex items-center  justify-center  ">
@@ -271,6 +288,9 @@ const ProjectDetail = () => {
                                                     alt={amenity.title}
                                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                                 />
+                                                <h1 className="absolute text-white/80 -left-8 bottom-12 -rotate-90 ">
+                                                    #stockimage
+                                                </h1>
                                             </div>
                                             <h3 className="text-[#ebd2a0] text-center text-sm md:text-base lg:text-lg tracking-[0.05em] uppercase font-[400]">
                                                 {amenity.title}
@@ -397,46 +417,58 @@ const ProjectDetail = () => {
                     {/* Heading */}
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-[400] text-center mb-12 md:mb-16 lg:mb-20">
                         <span className="bg-gradient-to-r newF from-[#9c7948] via-[#d1a260] to-[#fcc06c] bg-clip-text text-transparent">
-                            Gallery
+                            Construction Update
                         </span>
                     </h2>
 
                     {/* Gallery Grid */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-2  auto-rows-[200px] md:auto-rows-[250px]">
                         {/* Image 1 - Living Room (Tall) */}
-                        <div className="col-span-1 row-span-2 overflow-hidden group cursor-pointer">
+                        <div className="col-span-1 relative row-span-2 overflow-hidden group cursor-pointer">
                             <img
                                 src={galleryImages[0].src}
                                 alt={galleryImages[0].alt}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
+                            <h1 className="absolute text-white/80 -left-8 bottom-12 -rotate-90 ">
+                                #stockimage
+                            </h1>
                         </div>
 
                         {/* Image 2 - Kitchen */}
-                        <div className="col-span-1 row-span-1 overflow-hidden group cursor-pointer">
+                        <div className="col-span-1 relative row-span-1 overflow-hidden group cursor-pointer">
                             <img
                                 src={galleryImages[1].src}
                                 alt={galleryImages[1].alt}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
+                            <h1 className="absolute text-white/80 -left-8 bottom-12 -rotate-90 ">
+                                #stockimage
+                            </h1>
                         </div>
 
                         {/* Image 4 - Bedroom (Tall) */}
-                        <div className="col-span-2 row-span-2 overflow-hidden group cursor-pointer">
+                        <div className="col-span-2 relative row-span-2 overflow-hidden group cursor-pointer">
                             <img
                                 src={galleryImages[3].src}
                                 alt={galleryImages[3].alt}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
+                            <h1 className="absolute text-white/80 -left-8 bottom-12 -rotate-90 ">
+                                #stockimage
+                            </h1>
                         </div>
 
                         {/* Image 5 - Bedroom 2 */}
-                        <div className="col-span-1 row-span-1 overflow-hidden group cursor-pointer">
+                        <div className="col-span-1 relative row-span-1 overflow-hidden group cursor-pointer">
                             <img
                                 src={galleryImages[4].src}
                                 alt={galleryImages[4].alt}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
+                            <h1 className="absolute text-white/80 -left-8 bottom-12 -rotate-90 ">
+                                #stockimage
+                            </h1>
                         </div>
                     </div>
                 </div>
@@ -454,6 +486,37 @@ const ProjectDetail = () => {
                 ></iframe>
             </section>
 
+            <section className="bg-white  py-10 md:py-20">
+                <div className="max-w-7xl mx-auto px-6">
+                    {/* Heading */}
+                    <div className="grid grid-cols-3 gap-2">
+                        <div className="flex justify-center flex-col items-center">
+                            <h1 className="">
+                                UPRERA No. Phase I: UPRERAPRJ172300
+                            </h1>
+                            <img
+                                src="/assets/images/Project/Phase I.png"
+                                alt=""
+                            />
+                        </div>
+                        <div className="flex justify-center flex-col items-center">
+                            <h1 className="">UPSIDA No.: 545/2023</h1>
+                            <h1 className="">Website: www.up-rera.in</h1>
+                            {/* <img src="/assets/images/Project/Phase I.png" alt="" /> */}
+                        </div>
+                        <div className="flex justify-center flex-col items-center">
+                            <h1 className="">
+                                UPRERA No. Phase II: UPRERAPRJ316690
+                            </h1>
+                            <img
+                                src="/assets/images/Project/Phase II.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Get in Touch Section */}
             <section className="bg-white  py-20 md:py-32">
                 <div className="max-w-7xl mx-auto px-6">
@@ -464,7 +527,7 @@ const ProjectDetail = () => {
                                 Get in touch
                             </h2>
 
-                            <div className="space-y-4">
+                            <form onSubmit={handleSubmit} className="space-y-4">
                                 <input
                                     type="text"
                                     placeholder="FULL NAME"
@@ -476,6 +539,7 @@ const ProjectDetail = () => {
                                         })
                                     }
                                     className="w-full px-4 py-3 bg-[#f1eee7]  text-sm outline-none border-none focus:outline-none focus:border-none focus:ring-0"
+                                    required
                                 />
 
                                 <div className="grid md:grid-cols-2 gap-4">
@@ -491,6 +555,7 @@ const ProjectDetail = () => {
                                                 })
                                             }
                                             className="w-full px-4 py-3 pl-16  bg-[#f1eee7]  text-sm outline-none border-none focus:outline-none focus:border-none focus:ring-0"
+                                            required
                                         />
                                         <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-1">
                                             <span className="text-orange-500 text-lg">
@@ -513,6 +578,7 @@ const ProjectDetail = () => {
                                             })
                                         }
                                         className="w-full px-4 py-3 bg-[#f1eee7]  text-sm outline-none border-none focus:outline-none focus:border-none focus:ring-0"
+                                        required
                                     />
                                 </div>
 
@@ -530,12 +596,12 @@ const ProjectDetail = () => {
                                 ></textarea>
 
                                 <button
-                                    onClick={handleSubmit}
+                                    type="submit"
                                     className="bg-[#EBD2A0]  text-black r-m  px-8 py-3  tracking-widest transition-colors duration-200"
                                 >
                                     SUBMIT
                                 </button>
-                            </div>
+                            </form>
                         </div>
 
                         {/* Map */}

@@ -2,6 +2,7 @@ import BannerComponent from "@/Components/BannerComponent";
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
 import React, { useState } from "react";
+import { router } from "@inertiajs/react";
 
 const Vision = () => {
     const [formData, setFormData] = useState({
@@ -15,7 +16,20 @@ const Vision = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Form submitted:", formData);
+        router.post('/enquiry', {
+            name: formData.fullName,
+            phone: formData.phone,
+            email: formData.email,
+            message: formData.message,
+        }, {
+            onSuccess: () => {
+                setFormData({ fullName: "", phone: "", email: "", message: "" });
+                alert('Thank you for your enquiry. We will get back to you soon!');
+            },
+            onError: (errors) => {
+                console.error('Form submission errors:', errors);
+            },
+        });
     };
 
     const handleNewsletterSubmit = (e) => {
@@ -26,7 +40,7 @@ const Vision = () => {
         <div>
             <Navbar />
             <BannerComponent
-                imageSrc={"/assets/images/About Us/Asset 7.png"}
+                imageSrc={"/assets/images/About Us/Asset 19.png"}
                 titleText={"Vision & Mission"}
             />
 
@@ -71,7 +85,7 @@ const Vision = () => {
                                 Get in touch
                             </h2>
 
-                            <div className="space-y-4">
+                            <form onSubmit={handleSubmit} className="space-y-4">
                                 <input
                                     type="text"
                                     placeholder="FULL NAME"
@@ -83,6 +97,7 @@ const Vision = () => {
                                         })
                                     }
                                     className="w-full px-4 py-3 bg-[#f1eee7]  text-sm outline-none border-none focus:outline-none focus:border-none focus:ring-0"
+                                    required
                                 />
 
                                 <div className="grid md:grid-cols-2 gap-4">
@@ -98,6 +113,7 @@ const Vision = () => {
                                                 })
                                             }
                                             className="w-full px-4 py-3 pl-16  bg-[#f1eee7]  text-sm outline-none border-none focus:outline-none focus:border-none focus:ring-0"
+                                            required
                                         />
                                         <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-1">
                                             <span className="text-orange-500 text-lg">
@@ -120,6 +136,7 @@ const Vision = () => {
                                             })
                                         }
                                         className="w-full px-4 py-3 bg-[#f1eee7]  text-sm outline-none border-none focus:outline-none focus:border-none focus:ring-0"
+                                        required
                                     />
                                 </div>
 
@@ -137,12 +154,12 @@ const Vision = () => {
                                 ></textarea>
 
                                 <button
-                                    onClick={handleSubmit}
+                                    type="submit"
                                     className="bg-[#EBD2A0]  text-black r-m  px-8 py-3  tracking-widest transition-colors duration-200"
                                 >
                                     SUBMIT
                                 </button>
-                            </div>
+                            </form>
                         </div>
 
                         {/* Map */}

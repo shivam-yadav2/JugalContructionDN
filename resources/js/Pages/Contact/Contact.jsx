@@ -2,13 +2,39 @@ import BannerComponent from "@/Components/BannerComponent";
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
 import React, { useState } from "react";
+import { router } from "@inertiajs/react";
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        fullName: "",
+        phone: "",
+        email: "",
+        message: "",
+    });
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        router.post('/enquiry', {
+            name: formData.fullName,
+            phone: formData.phone,
+            email: formData.email,
+            message: formData.message,
+        }, {
+            onSuccess: () => {
+                setFormData({ fullName: "", phone: "", email: "", message: "" });
+                alert('Thank you for your enquiry. We will get back to you soon!');
+            },
+            onError: (errors) => {
+                console.error('Form submission errors:', errors);
+            },
+        });
+    };
+
     return (
         <div>
             <Navbar />
             <BannerComponent
-                imageSrc={"/assets/images/Contact Us/Asset 1.png"}
+                imageSrc={"/assets/images/Contact Us/Asset 5.png"}
                 titleText={"Contact Us"}
             />
 
@@ -21,11 +47,14 @@ const Contact = () => {
                                 Register Your Interest
                             </h2>
 
-                            <div className="space-y-4 w-full">
+                            <form onSubmit={handleSubmit} className="space-y-4 w-full">
                                 <input
                                     type="text"
                                     placeholder="FULL NAME"
+                                    value={formData.fullName}
+                                    onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                                     className="w-full px-4 py-3 bg-[#f1eee7] text-sm outline-none border-none focus:outline-none focus:border-none focus:ring-0"
+                                    required
                                 />
 
                                 <div className="grid md:grid-cols-2 gap-4">
@@ -33,7 +62,10 @@ const Contact = () => {
                                         <input
                                             type="tel"
                                             placeholder="PHONE"
+                                            value={formData.phone}
+                                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                             className="w-full px-4 py-3 pl-16 bg-[#f1eee7] text-sm outline-none border-none focus:outline-none focus:border-none focus:ring-0"
+                                            required
                                         />
                                         <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-1">
                                             <span className="text-orange-500 text-lg">
@@ -48,22 +80,27 @@ const Contact = () => {
                                     <input
                                         type="email"
                                         placeholder="EMAIL"
+                                        value={formData.email}
+                                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                         className="w-full px-4 py-3 bg-[#f1eee7] text-sm outline-none border-none focus:outline-none focus:border-none focus:ring-0"
+                                        required
                                     />
                                 </div>
 
                                 <textarea
                                     placeholder="MESSAGE"
                                     rows="5"
+                                    value={formData.message}
+                                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                     className="w-full px-4 py-3 bg-[#f1eee7] text-sm outline-none border-none focus:outline-none focus:border-none focus:ring-0"
                                 ></textarea>
 
                                 <div className="flex justify-center">
-                                    <button className="bg-[#EBD2A0] text-black r-m px-8 py-3 tracking-widest transition-colors duration-200">
+                                    <button type="submit" className="bg-[#EBD2A0] text-black r-m px-8 py-3 tracking-widest transition-colors duration-200">
                                         SUBMIT
                                     </button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
