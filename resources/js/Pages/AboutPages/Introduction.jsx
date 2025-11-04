@@ -63,48 +63,16 @@ const Introduction = () => {
                                 generations
                             </h1>
                             <p>
-                                Lala Jugal Kishore Construction has secured
-                                pronounced recognition and has become an
-                                intrinsic part of the Awadhi culture since its
-                                inception in 1857. Committed to delivering
-                                incomparable value through exemplary jewellery
-                                that masters all facets of luxury and
-                                innovation. The foundation of our success lies
-                                in the unwavering faith of people that motivates
-                                us to serve even more. With increased focus and
-                                dedication, we have diversified our brand
-                                portfolio into the Real Estate sector.
+                            From a legacy that dates back to 1857, LJK Construction India Pvt. Ltd., part of the esteemed Lala Jugal Kishore Group, has evolved into a distinguished real estate developer that seamlessly blends heritage with modernity. With deep roots in jewelry and craftsmanship, our true essence lies in creating lasting value — not just through exceptional buildings, but through trusted relationships, superior experiences, and timeless design.
+
                             </p>
 
                             <p>
-                                LJK Construction is established with the goal of
-                                developing residential townships and commercial
-                                projects that offer state of art facilities, an
-                                exclusive lifestyle, best in the class working
-                                spaces and business operation establishments. In
-                                line with our motto, we aspire to give value to
-                                our customers, business partners and society as
-                                a whole. LJK Construction is built on more than
-                                simply concrete and steel; it is founded on the
-                                virtues of trust, integrity, and inclusion that
-                                the company has established over the course of
-                                its 150+ year history.
+                            At LJK, we specialize in crafting residential townships, independent villas, plotted developments, and commercial spaces that elevate everyday living. Every project reflects our unwavering commitment to thoughtful planning, world-class amenities, and sustainable architecture. We take pride in designing sun-facing layouts, nurturing green environments, and ensuring seamless infrastructure that enhances the way people live, work, and connect.
                             </p>
 
                             <p>
-                                The company’s unique advantage stems from its
-                                thorough solution-oriented approach, which
-                                includes high-quality construction, classic
-                                designs, sustainable architecture, breathtaking
-                                landscaping, and a plethora of lifestyle
-                                amenities to provide affordable luxury and
-                                improve the customer experience. LJK
-                                Construction's roadmap for future development
-                                envisions residential plots, group housings,
-                                independent villas and commercial projects in
-                                harmony with nature, reflecting the principles
-                                of trust and exquisite craftsmanship synonymous
-                                with the group's brand values.
+                            With a legacy built on trust and innovation, LJK continues to shape spaces that inspire communities and stand the test of time.
                             </p>
                         </div>
                     </div>

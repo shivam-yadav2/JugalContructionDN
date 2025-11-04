@@ -6,25 +6,25 @@ export default function FourPillars() {
     {
       icon: '/assets/images/About Us/Asset 5.png',
       title: "INNOVATION & TRADITION",
-      description: "We have an ability to keep up with current trends and meet modern demands through innovation has enabled us to acquire both the means and the trust necessary to preserve the most important aspects of our heritage.",
+      description: "We have the ability to keep up with current trends and meet modern demands through innovation. This has enabled us to acquire both the means and the trust necessary to preserve the most important aspects of our heritage.",
       bgColor: "bg-[#f2e4c7]"
     },
     {
       icon: '/assets/images/About Us/Asset 6.png',
       title: "INTEGRITY & TRANSPARENCY",
-      description: "Integrity & Transparency, we believe, are essential components of prosperity. Although it is tough to quantify, yet it can be felt when it exists. Treating clients and employees with honesty, fairness, and respect are one of our key values.",
+      description: "Integrity and transparency, we believe, are essential components of prosperity. Although it is tough to quantify, it can be felt when it exists. Treating clients and employees honestly, fairly, and with respect are among our core values.",
       bgColor: "bg-gray-100"
     },
     {
       icon: '/assets/images/About Us/Asset 3.png',
       title: "PASSION AT WORK",
-      description: "Passion at work is not just a mere statement for us, it is our working culture. Every day, we endeavour to live it. It motivates us to offer you the best roducts and services.",
+      description: "Passion at work is not just a statement for us — it defines our working culture. Every day, we strive to live it. It motivates us to offer you the best products and services.",
       bgColor: "bg-[#f2e4c7]"
     },
     {
       icon: '/assets/images/About Us/Asset 4.png',
       title: "CUSTOMER CENTRICITY",
-      description: "\"Customer value and satisfaction form the foundation for the group's credibility and goodwill\". The LJK Group draws inspiration from its client's support and faith, to follow a morally dominant code of conduct.",
+      description: "Customer value and satisfaction form the foundation for the group’s credibility and goodwill. The LJK Group draws inspiration from its clients’ trust and support to follow a morally driven code.",
       bgColor: "bg-gray-100"
     }
   ];

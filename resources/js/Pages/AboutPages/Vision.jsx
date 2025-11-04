@@ -59,17 +59,7 @@ const Vision = () => {
                         {/* Right Column: Body Text */}
                         <div className="lg:order-2  space-y-6 text-[#202020] text-sm  r-m mt-16 leading-relaxed">
                             <p>
-                                At LJK construction, our vision and mission
-                                align in one purpose — to create spaces that go
-                                beyond construction and embody a legacy of
-                                trust, craftsmanship, and excellence. We aim to
-                                shape communities that balance heritage with
-                                modernity, offering comfort, sustainability, and
-                                lasting value. With a commitment to integrity,
-                                transparency, and timely delivery, we strive to
-                                build not just homes, but lifelong relationships
-                                and inspiring lifestyles that stand the test of
-                                time.
+                            At LJK Construction, our vision and mission align in one purpose – to create spaces that go beyond construction and embody a legacy of trust, craftsmanship, and excellence. We aim to shape communities that balance heritage with modernity, offering comfort, sustainability, and lasting value. With a commitment to integrity, transparency, and timely delivery, we strive to build not just homes, but lifelong relationships and inspiring lifestyles that stand the test of time.
                             </p>
                         </div>
                     </div>

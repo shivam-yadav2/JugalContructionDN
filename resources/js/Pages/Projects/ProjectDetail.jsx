@@ -191,7 +191,7 @@ const ProjectDetail = () => {
                 <div className="absolute inset-0  flex items-center flex-col justify-center pb-24">
                     <div className=" w-full h-full flex items-center  justify-center  ">
                         <img
-                            src="/assets/images/home/Asset 7.png"
+                            src="/assets/images/home/Asset 57.png"
                             alt="Logo Accent"
                             className="mt-24 lg:h-auto h-28 object-cover"
                         />
